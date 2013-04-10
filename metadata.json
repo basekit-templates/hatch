@@ -1,0 +1,8 @@
+{
+	"name":"Hatch",
+	"thumbnail":"hatch.jpg",
+	"screenshot":"hatch.jpg",
+	"pageTypes":["about"],
+	"defaultColorSwatch":"Warmth 2",
+	"defaultFontSwatch":"Lato"
+}

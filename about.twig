@@ -1,0 +1,30 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+ <header>
+       {{widget('companyheader', 'companyheader', {"defaultlogo": asset('hatch/images/egg.png')})|raw}}
+       {{widget('extendednavigation', 'navigationheader', {})|raw}}
+</header>
+
+{{zone('main')|raw}}
+
+<footer>
+    <section>
+        <article>
+            {{widget('content', 'footercolumn1', {"content":"<h3>LOREM IPSUM</h3><p>Pulvinar Vitae Alam</p><p>Integer Dictum Orcin</p><p>Donec Iquam Lorem</p><p>Ultricies Viverra</p>"})|raw}}
+        </article>
+        <article>
+           {{widget('content', 'footercolumn2', {"content":"<h3>ALAM THOAT</h3><p>Pulvinar Vitae Alam</p><p>Integer Dictum Orcin</p><p>Donec Iquam Lorem</p><p>Ultricies Viverra</p>"})|raw}}
+        </article>
+        <article>
+            {{widget('content', 'footercolumn3', {"content":"<h3>KAREN FROAT</h3><p>Pulvinar Vitae Alam</p><p>Integer Dictum Orcin</p><p>Donec Iquam Lorem</p><p>Ultricies Viverra</p>"})|raw}}
+        </article>
+        <article>
+            {{widget('content', 'footercolumn4', {"content":"<h3>DICTUM ORCIN</h3>"})|raw}}
+            {{widget('companyaddress', 'companyaddressfooter', {})|raw}}
+        </article>
+    </section>
+</footer>
+
+{% endblock %}
