@@ -187,8 +187,16 @@ header {
   text-decoration: none;
 }
 
+}
 .widget.extendednavigation ul li a {
   color: @color-swatch4;
+}
+.widget.extendednavigation ul li.folder {
+    background-image: image('hatch/images/arrow-down.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 100%;
+    cursor: pointer;
 }
 
 .widget.extendednavigation ul li a:hover {
@@ -247,6 +255,14 @@ span.bgimage img {
   margin: 0 auto;
   width: 90%;
   max-width: 960px;
+}
+
+.widget.feature {
+    width: 100%;
+    padding: 4em 0 5em;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .widget.feature h2 {
