@@ -3,8 +3,10 @@
 {% block content %}
 
  <header>
+    <div class="wrapper clearfix">
        {{widget('companyheader', 'companyheader', {"defaultlogo": asset('hatch/images/egg.png')})|raw}}
        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
 </header>
 
 <section>
@@ -14,7 +16,7 @@
 {{zone('main')|raw}}
 
 <footer>
-    <section>
+    <section class="wrapper clearfix">
         <article>
             {{widget('content', 'footercolumn1', {"content":"<h3>LOREM IPSUM</h3><p>Pulvinar Vitae Alam</p><p>Integer Dictum Orcin</p><p>Donec Iquam Lorem</p><p>Ultricies Viverra</p>"})|raw}}
         </article>
