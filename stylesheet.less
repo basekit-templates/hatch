@@ -135,6 +135,8 @@ header {
 }
 .widget.companyheader {
   float: left;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .widget.companyheader span.logo {
   display: block;
@@ -312,7 +314,7 @@ span.bgimage img {
   }
   .widget.extendednavigation ul li {
     width: 100%;
-    padding: .8em 0 !important;
+    padding: 1.2em 0 !important;
     text-align: center;
     background-color: @color-swatch2;
     margin-bottom: .7em;
@@ -322,14 +324,15 @@ span.bgimage img {
   }
   .widget.extendednavigation li:hover > ul {
     width: 100%;
+    border-top: 4px solid color-swatch3;
     padding-top: 0;
     padding-bottom: 0;
     margin-left: 0;
+    margin-top: 17px;
   }
   .widget.extendednavigation li:hover > ul li {
-    background-color: @color-swatch1;
-    border-bottom: 1px solid @color-swatch2;
-    margin-bottom: 0;
+    border-bottom: 1px solid darken(@color-swatch2,15%);
+    margin-bottom: 1px;
   }
   .widget.extendednavigation li:hover > ul li:last-child {
     border-bottom: 0;
