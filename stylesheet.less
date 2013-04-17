@@ -656,7 +656,7 @@ header {
   margin-bottom: 2em;
 }
 
-span.bgimage img {
+widget.feature span.bgimage img {
   height: 100%;
 }
 
@@ -683,6 +683,66 @@ span.bgimage img {
   color: @color-swatch1;
   letter-spacing: 0;
   font-size: 1.22em;
+}
+
+.widget.feature button
+{
+    padding: 1.2em 2em;
+    -webkit-border-radius: 40px;
+       -moz-border-radius: 40px;
+            border-radius: 40px;
+    box-shadow: 0 0 0 7px rgba(0,0,0,0.2);
+    border: none;
+
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.widget.feature button:hover 
+{
+    background-color: darken(@color-swatch3,5%);
+    cursor: pointer;
+}
+
+.widget.feature button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.feature button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.feature button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.feature button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.feature button.btn.italic {
+    font-style: italic;
+}
+
+.widget.feature button.btn.bold {
+    font-weight: bold;
+}
+
+.widget.feature button span {
+    vertical-align: center;
+}
+
+.widget.feature button i {
+    margin-right: 5px;
 }
 
 /* Twitter CSS */
