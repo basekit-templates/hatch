@@ -243,7 +243,7 @@ a:hover {
 hr.line {
    background-color: @color-swatch3;
    height: 3px;
-   width: 90%;
+   width: 100%;
    border: none;
 }
 
@@ -490,6 +490,10 @@ header {
   text-decoration: none;
 }
 
+.widget.extendednavigation ul li:hover {
+  color: @color-swatch3;
+}
+
 .widget.extendednavigation ul li a {
   display: block;
   font-family: @font-swatch6-font-family;
@@ -532,7 +536,7 @@ header {
   color: lighten(@color-swatch5,10%);
 }
 .widget.extendednavigation li:hover > ul > li > a:hover {
-  color: lighten(@color-swatch5,10%);
+  color: @color-swatch3;
 }
 
 /* Gallery CSS */
@@ -547,8 +551,7 @@ header {
 }
 .widget.gallery p
 {
-    padding: 10px;
-    color: #333333;
+    color: @color-swatch4;
 }
 .widget.gallery ul.gallery-widget
 {
@@ -650,14 +653,11 @@ header {
 
 
 .widget.feature {
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   margin-bottom: 2em;
 }
 
-widget.feature span.bgimage img {
-  height: 100%;
+.widget.feature span.bgimage img {
+  min-height: 100%;
 }
 
 .widget.feature .content {
@@ -669,9 +669,6 @@ widget.feature span.bgimage img {
 
 .widget.feature {
     width: 100%;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
 }
 
 .widget.feature h2 {
@@ -1080,6 +1077,10 @@ widget.feature span.bgimage img {
   }
   section.feature header.feature-text {
     padding: 3em 0;
+  }
+  .widget.gallery p
+  {
+      padding: 10px;
   }
 }
 
