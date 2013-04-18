@@ -504,7 +504,7 @@ header {
 }
 
 .widget.extendednavigation ul li.folder {
-  background-image:  image('/hatch/images/arrow-down.png');
+  background-image:  url('../images/arrow-down.png');
   background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
@@ -533,6 +533,7 @@ header {
 .widget.extendednavigation li:hover > ul > li {
   display: block;
   width: 100%;
+  text-align: left;
 }
 
 .widget.extendednavigation li:hover > ul > li > a {
@@ -543,6 +544,7 @@ header {
 .widget.extendednavigation li:hover > ul > li > a:hover {
   color: @color-swatch3;
 }
+
 
 /* Gallery CSS */
 /* 
@@ -870,7 +872,7 @@ header {
     resize: none;
 }
 
-..widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn {
     width: 100%;
     font-family:@font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
@@ -1023,6 +1025,9 @@ header {
   .widget.extendednavigation ul li:first-child {
     padding-left: 0;
   }
+  .widget.extendednavigation li:hover > ul > li:first-child > a {
+    padding-left: 1.8em;
+  }
   .widget.feature h2 {
     font-size: 2.5em;
   }
@@ -1070,12 +1075,16 @@ header {
     margin-top: 17px;
   }
   .widget.extendednavigation li:hover > ul li {
+    text-align: center;
     border-bottom: 1px solid darken(@color-swatch2,15%);
     margin-bottom: 1px;
   }
   .widget.extendednavigation li:hover > ul li:last-child {
     border-bottom: 0;
   }
+  .widget.extendednavigation li:hover > ul > li:first-child > a {
+    padding-left: 0;
+    }
   .widget.feature h2 {
     font-size: 2.2em;
   }
@@ -1110,4 +1119,3 @@ header {
 .clearfix {
   *zoom: 1;
 }
-
