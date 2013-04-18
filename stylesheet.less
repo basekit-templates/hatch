@@ -530,6 +530,11 @@ header {
   margin-left: -1.8em;
   border-bottom: 4px solid @color-swatch3;
 }
+.widget.extendednavigation li:hover > ul > li {
+  display: block;
+  width: 100%;
+}
+
 .widget.extendednavigation li:hover > ul > li > a {
   display: block;
   background-image: none;
@@ -1014,6 +1019,9 @@ header {
     float: left;
     width: 100%;
     padding-top: 1em;
+  }
+  .widget.extendednavigation ul li:first-child {
+    padding-left: 0;
   }
   .widget.feature h2 {
     font-size: 2.5em;
