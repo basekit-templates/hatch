@@ -477,6 +477,21 @@ header {
   margin: 0;
 }
 
+.widget.extendednavigation ul.align-center li
+{
+    text-align: center;
+}
+
+.widget.extendednavigation ul.align-left li
+{
+    text-align: left;
+}
+
+.widget.extendednavigation ul.align-right li
+{
+    text-align: right;
+}
+
 .widget.extendednavigation ul li {
   float: left;
   display: block;
@@ -1060,9 +1075,16 @@ header {
     background-color: @color-swatch2;
     margin-bottom: .7em;
   }
-  .widget.extendednavigation ul li a {
-
+  .widget.extendednavigation ul.align-right li
+  {
+      background-image: none!important;
   }
+  .widget.extendednavigation ul li a {
+    padding: 0 20px;
+  }
+   .widget.extendednavigation ul li.folder span.text {
+    padding: 0 20px; 
+   }
   .widget.extendednavigation li:hover > ul {
     width: 100%;
     border-top: 2px solid @color-swatch3;
