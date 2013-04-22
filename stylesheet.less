@@ -1,11 +1,30 @@
 body {
+  background-color: @color-swatch1;
   margin: 0;
   padding: 0;
 }
 
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+a {
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  color:@color-swatch3;
+  letter-spacing: @font-swatch4-letter-spacing;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 h2, h3, h4, h5, p {
   margin: 0;
-  padding: 20px 0;
+  padding: 0 0 10px;
 }
 
 h1 {
@@ -210,27 +229,6 @@ p
     line-height: @font-swatch5-line-height;
 }
 
-body {
-  background-color: @color-swatch1;
-}
-
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-a {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@color-swatch3;
-  letter-spacing: @font-swatch4-letter-spacing;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
 /* Divider CSS */
 
 .widget.line {
@@ -238,7 +236,7 @@ a:hover {
 }
 
 hr.line {
-   background-color: @color-swatch3;
+   background-color: @color-swatch2;
    height: 3px;
    width: 100%;
    border: none;
@@ -479,17 +477,17 @@ header {
 
 .widget.extendednavigation ul.align-center li
 {
-    text-align: center;
+  text-align: center;
 }
 
 .widget.extendednavigation ul.align-left li
 {
-    text-align: left;
+  text-align: left;
 }
 
 .widget.extendednavigation ul.align-right li
 {
-    text-align: right;
+  text-align: right;
 }
 
 .widget.extendednavigation ul li {
@@ -516,7 +514,7 @@ header {
 }
 
 .widget.extendednavigation ul li.folder {
-  background-image:  image('/hatch/images/arrow-down.png');
+  background-image: image('hatch/images/arrow-down.png');
   background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
@@ -680,7 +678,7 @@ header {
 }
 
 .widget.feature .content {
-  padding: 4em 0;
+  padding: 5em 0;
   margin: 0 auto;
   width: 90%;
   max-width: 960px;
@@ -692,31 +690,34 @@ header {
 
 .widget.feature h2 {
   color: @color-swatch1;
-  padding: 0;
   font-size: 3.1em;
+  text-align: center;
 }
 .widget.feature h3 {
   color: @color-swatch1;
   letter-spacing: 0;
   font-size: 1.22em;
+  text-align: center;
 }
 
 .widget.feature button
 {
-    padding: 1.2em 2em;
-    -webkit-border-radius: 40px;
-       -moz-border-radius: 40px;
-            border-radius: 40px;
-    box-shadow: 0 0 0 7px rgba(0,0,0,0.2);
-    border: none;
+  display: block;
+  padding: 1.2em 2em;
+  margin: 2em auto 1em;
+  -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
+          border-radius: 40px;
+  box-shadow: 0 0 0 7px rgba(0,0,0,0.2);
+  border: none;
 
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    letter-spacing: 2px;
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .widget.feature button:hover 
@@ -854,7 +855,7 @@ header {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     background-color: lighten(@color-swatch2,50%);
-    background-image: url(assets/images/bg.png);
+    background-image: image('/hatch/assets/images/bg.png');
     background-repeat: repeat;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -872,7 +873,7 @@ header {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     background-color: lighten(@color-swatch2,50%);
-    background-image: url(assets/images/bg.png);
+    background-image: image('/hatch/assets/images/bg.png');
     background-repeat: repeat;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -1037,7 +1038,7 @@ header {
   .widget.extendednavigation ul li:first-child {
     padding-left: 0;
   }
-  .widget.extendednavigation li:hover > ul > li:first-child > a {
+  .widget.extendednavigation ul li:hover ul li:first-child {
     padding-left: 1.8em;
   }
   .widget.feature h2 {
@@ -1075,16 +1076,9 @@ header {
     background-color: @color-swatch2;
     margin-bottom: .7em;
   }
-  .widget.extendednavigation ul.align-right li
-  {
-      background-image: none!important;
-  }
   .widget.extendednavigation ul li a {
     padding: 0 20px;
   }
-   .widget.extendednavigation ul li.folder span.text {
-    padding: 0 20px; 
-   }
   .widget.extendednavigation li:hover > ul {
     width: 100%;
     border-top: 2px solid @color-swatch3;
@@ -1101,9 +1095,21 @@ header {
   .widget.extendednavigation li:hover > ul li:last-child {
     border-bottom: 0;
   }
-  .widget.extendednavigation li:hover > ul > li:first-child > a {
-    padding-left: 0;
-    }
+
+  /* UL ALIGN RIGHT */
+  .widget.extendednavigation ul.align-right li:hover ul li {
+    text-align: right;
+  }
+
+  .widget.extendednavigation ul.align-right li.folder {
+    background-position: 12px center;
+  }
+
+  /* UL ALIGN LEFT */
+  .widget.extendednavigation ul.align-left li:hover ul li {
+    text-align: left;
+  }
+
   .widget.feature h2 {
     font-size: 2.2em;
   }
@@ -1138,3 +1144,8 @@ header {
 .clearfix {
   *zoom: 1;
 }
+
+
+
+
+
