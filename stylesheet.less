@@ -5,8 +5,8 @@ body {
 }
 
 .wrapper {
-  width: 90%;
-  margin: 0 5%;
+    width: 90%;
+    margin: 0 5%;
 }
 
 a {
@@ -514,7 +514,7 @@ header {
 }
 
 .widget.extendednavigation ul li.folder {
-  background-image: image('hatch/images/arrow-down.png');
+  background-image: image('/hatch/images/arrow-down.png');
   background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
@@ -668,13 +668,8 @@ header {
     display: none;
 }
 
-
 .widget.feature {
   margin-bottom: 2em;
-}
-
-.widget.feature span.bgimage img {
-  min-height: 100%;
 }
 
 .widget.feature .content {
@@ -855,7 +850,7 @@ header {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     background-color: lighten(@color-swatch2,50%);
-    background-image: image('/hatch/assets/images/bg.png');
+    background-image: image('/hatch/images/form-bg.png');
     background-repeat: repeat;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -873,7 +868,7 @@ header {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     background-color: lighten(@color-swatch2,50%);
-    background-image: image('/hatch/assets/images/bg.png');
+    background-image: image('/hatch/images/form-bg.png');
     background-repeat: repeat;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -943,7 +938,7 @@ header {
     color: @font-swatch5-color;
     border: darken(@color-swatch1,10%) solid 1px;
     padding: 12px 10px 12px 40px;
-    background-image: image('/modernwhite/images/twitter.png');
+    background-image: image('/hatch/images/twitter.png');
     background-repeat: no-repeat;
     background-position: 10px;
     -moz-border-radius: 6px;
@@ -960,7 +955,7 @@ header {
 .widget.tweet a:hover, .tweet a:active {
     background-color: darken(@color-swatch1,10%);
     border: darken(@color-swatch1,15%) solid 1px;
-    background-image: image('/modernwhite/images/twitter.png');
+    background-image: image('/hatch/images/twitter.png');
     background-repeat: no-repeat;
     background-position: 10px;
     cursor: pointer;
@@ -1063,6 +1058,9 @@ header {
   header {
     padding: 20px 0 10px;
   }
+  .widget.companyheader {
+    width: 100%;
+  }
   .widget.feature .content {
     padding: 2em 0 3em 0;
   }
@@ -1122,16 +1120,16 @@ header {
   }
   .widget.gallery p
   {
-      padding: 10px;
+    padding: 10px;
   }
 }
 
 @media only screen and (min-width: 1140px) {
-    .wrapper {
-        width: 960px; /* 1140px - 10% for margins */
-        margin: 0 auto;
-    }
+  .wrapper {
+    width: 960px; /* 1140px - 10% for margins */
+    margin: 0 auto;
   }
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -1144,8 +1142,3 @@ header {
 .clearfix {
   *zoom: 1;
 }
-
-
-
-
-
