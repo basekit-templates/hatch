@@ -13,7 +13,7 @@ a {
   font-family:@font-swatch2-font-family;
   font-size:@font-swatch5-font-size;
   font-weight:@font-swatch5-font-weight;
-  color:@color-swatch2;
+  color:@color-swatch3;
   text-decoration: none;
 }
 
@@ -30,6 +30,7 @@ h1 {
   font-family:@font-swatch1-font-family;
   font-weight: @font-swatch1-font-weight;
   color:@font-swatch1-color;
+  line-height:@font-swatch1-line-height;
   letter-spacing: @font-swatch1-letter-spacing;
   font-size: @font-swatch1-font-size;
 }
@@ -486,13 +487,13 @@ header h1 {
   float: left;
   overflow-x: auto;
   overflow-y: hidden;
-  margin-top: 4px;
 }
 
 .widget.companyheader .logo {
   display: block;
   float: left;
   margin-right: 6px;
+  margin-top: 8px;
 }
 
 .widget.companyheader:before,
@@ -603,11 +604,12 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 
 .widget.navigation ul li a {
   display: block;
-  font-family: @font-swatch6-font-family;
-  font-size: @font-swatch6-font-size;
+  font-family:@font-swatch6-font-family;
+  font-size:@font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
-  letter-spacing: @font-swatch6-letter-spacing;
   color: @font-swatch6-color;
+  line-height:@font-swatch6-line-height;
+  letter-spacing: @font-swatch6-letter-spacing;
 }
 
 .widget.navigation ul li a:hover {
@@ -625,7 +627,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 .widget.extendednavigation ul {
   float: left;
   padding: 0;
-  margin: 4px 0 0;
+  margin: 7px 0 0;
 }
 
 .widget.extendednavigation ul.align-center li
@@ -652,7 +654,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   color: @color-swatch3;
 }
 
-.widget.extendednavigation ul li a {
+.widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
   padding: 6px 14px;
   margin-left: 30px;
@@ -663,6 +665,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   line-height:@font-swatch6-line-height;
   letter-spacing: @font-swatch6-letter-spacing;
 }
+
 .widget.extendednavigation ul li a:hover {
   text-decoration: none;
 }
@@ -691,7 +694,9 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   background-color: @color-swatch1;
   border: 1px solid @color-swatch2;
   z-index: 500;
-  padding: 30px 0;
+  padding: 10px 0;
+  margin-left: 1.1em;
+  margin-top: 22px;
 }
 
 .widget.extendednavigation li:hover > ul > li {
@@ -705,19 +710,23 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   background-image: none;
   color: @color-swatch5;
   padding: 14px;
+  margin-left: 0;
+}
+
+.widget.extendednavigation li:hover > ul > li > a .text {
+  margin-left: 0;
 }
 
 .widget.extendednavigation li:hover > ul > li > a:hover {
   color: @color-swatch3;
 }
 
-
 /* ===============================
    FEATURE
    =============================== */
 
 .widget.feature {
-  height: 450px;
+  height: 500px;
 }
 
 .widget.feature .bgimage {
@@ -727,6 +736,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 .widget.feature .content {
   margin: 0 auto;
   max-width: 960px;
+  padding: 7em 0;
 }
 
 .widget.feature .content .spare {
@@ -1149,6 +1159,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
     border: 1px solid darken(@color-swatch2,4%);
     margin-left: -1px;
     padding: 0;
+    margin-top: 8px;
   }
 
   .widget.extendednavigation li:hover > ul li {
@@ -1182,7 +1193,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   }
 
   .widget.feature .content {
-
+    padding: 3.6em 0;
   }
 
   .widget.feature button {
@@ -1259,6 +1270,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 
   .widget.extendednavigation ul li.folder .text {
     padding: 1.4em 1em;
+    margin-left: 0;
   }
 
   .widget .extendednavigation ul li:last-child {
@@ -1268,6 +1280,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   .widget.extendednavigation li:hover > ul {
     width: 100%;
     margin-left: 0;
+    margin-top: 0px;
     border-top: 1px solid @color-swatch3;
   }
 
@@ -1275,6 +1288,11 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
     display: block!important;
     margin-bottom: 0;
     text-align: center;
+    padding: 0;
+  }
+
+  .widget.extendednavigation li:hover > ul > li > a {
+    padding: 0;
   }
 
   .widget.extendednavigation ul li:hover > ul li:first-child {
