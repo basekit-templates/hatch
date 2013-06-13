@@ -727,17 +727,20 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
    =============================== */
 
 .widget.feature {
-  height: 500px;
+  /*height: 500px;*/
+  height: auto;
 }
 
 .widget.feature .bgimage {
-
+  height: 500px;
 }
 
 .widget.feature .content {
   margin: 0 auto;
-  max-width: 960px;
   padding: 7em 0;
+
+  display: absolute;
+  bottom: 0;
 }
 
 .widget.feature .content .spare {
@@ -1135,13 +1138,13 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   .widget .extendednavigation li {
     display: table-cell !important;
     float: none!important;
-    padding: .6em 0;
+    padding: 0.6em;
     background-color: @color-swatch2;
     border-left: 1px solid darken(@color-swatch2,4%);
     text-align: center;
   }
 
-  .widget.extendednavigation ul li a {
+  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
     margin-left: 0;
   }
 
@@ -1158,7 +1161,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   .widget.extendednavigation li:hover > ul {
     width: auto;
     border: 1px solid darken(@color-swatch2,4%);
-    margin-left: -1px;
+    margin-left: -10px;
     padding: 0;
     margin-top: 8px;
   }
@@ -1173,6 +1176,10 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
     padding-top: 15px;
   }
 
+   .widget.extendednavigation ul li:hover > ul li.folder .text {
+    margin-left: 0;
+  }
+
   /* OTHER */
 
   section.intro, section.main {
@@ -1185,20 +1192,23 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 
   /* FEATURE */
   .widget.feature {
-    height: 350px;
+    /*height: 350px;*/
+    height: auto;
   }
 
 
   .widget.feature .bgimage {
-
+    height: 350px;
   }
 
   .widget.feature .content {
     padding: 3.6em 0;
+    position: absolute;
+    bottom: 0;
   }
 
   .widget.feature button {
-    display: none;
+    /*display: none;*/
     /*margin: 1em auto;*/
   }
 
@@ -1322,20 +1332,26 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   /* FEATURE */
 
   .widget.feature {
-    height: 210px;
+    /*height: 210px;*/
+    height: auto;
   }
 
   .widget.feature .bgimage {
+    height: 210px;
+  }
 
+  .widget.feature .content {
+    padding: 2.2em 0;
   }
 
   .widget.feature h2 {
-    font-size: 20px;
-    padding-bottom: 0;
+    font-size: 26px;
+    line-height: 30px;
   }
-
-  .widget.feature h3 {
-    display: none;
+  .widget.feature h3
+   {
+    line-height: 24px;
+    /*display: none;*/
   }
 
   .widget.feature button {
