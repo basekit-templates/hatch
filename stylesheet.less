@@ -106,369 +106,13 @@ blockquote {
    CUSTOM CSS
    =============================== */
 
-section.intro {
-  text-align: center;
-  padding: 70px 0;
-}
-
-span.highlight {
-  color: @color-swatch3;
-  font-size: 34px;
-}
-
-span.dotted {
-  border-bottom: 1px dotted @color-swatch3;
-  padding-bottom: 6px;
-}
-
-.strap {
-  padding: 70px 0 50px;
-}
-
-.strap h4 {
-  font-size: 22px;
-  line-height: 52px;
-}
-
 section.main {
   padding: 40px 0;
 }
 
-/*.widget.responsivecolumns {
-  margin: 3em 0em;
-}*/
-
-
 /* ===============================
-   BUTTON CSS
+   HEADER
    =============================== */
-
-.widget.button {
-    padding: 4px 0;
-}
-
-.widget.button button
-{
-  padding: 4px 8px;
-  margin: 2.2em auto;
-  border: 2px solid darken(@color-swatch3,5%);
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
-
-  font-family: @font-swatch2-font-family;
-  font-size: 12px;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch3;
-  color: @color-swatch1;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
-}
-
-.widget.button button:hover 
-{
-  background-color: darken(@color-swatch3,5%);
-  cursor: pointer;
-}
-
-
-/* JUSTIFY */
-
-.widget.button button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.button button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.button button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.button button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.button button.btn.italic {
-    font-style: italic;
-}
-
-.widget.button button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.button span {
-    vertical-align: center;
-}
-
-.widget.button i {
-    margin-right: 5px;
-}
-
-/* Content CSS */
-/* 
-    Document   : image
-    Created on : 04-Jul-2012, 14:15:32
-    Author     : Dom
-    Description: Image Approcom
-*/
-
-
-.widget.content
-{
-    padding: 0;
-    overflow: hidden;
-}
-
-.widget.content span.expand
-{
-    font-family: @font-swatch3-font-family;
-    background-color: @color-swatch3;
-    color: @font-swatch7-color;
-    font-size: @font-swatch5-font-size;
-    padding: 4px 8px;
-    margin: 4px 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.widget.content span.expand:hover,
-.widget.content span.expand:focus
-{
-    cursor: pointer;
-    background-color: darken(@color-swatch3,5%);
-}
-
-/* Image CSS */
-/* 
-    Document   : image
-    Created on : 04-Jul-2012, 14:15:32
-    Author     : Dom
-    Description: Image Appproco 
-*/
-
-.widget.image img
-{
-    display:block;
-    max-width: 100%;
-}
-
-.widget.image {
-}
-
-.widget.image span.image-title {
-    display: block;
-    margin:5px;
-    font-family: @font-swatch4-font-family;
-    font-weight: @font-swatch4-font-weight;
-    font-size: @font-swatch4-font-size;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: @font-swatch4-line-height;
-}
-
-.widget.image span.image-description {
-    display: block;
-    margin:5px;
-    text-align: center;
-    font-family: @font-swatch5-font-family;
-    font-weight: @font-swatch5-font-weight;
-    font-size: @font-swatch5-font-size;
-    line-height: @font-swatch5-line-height;
-}
-
-/* Gallery CSS */
-/* 
-    Document   : gallery
-    Author     : Dom
-*/
-
-.widget.gallery
-{
-}
-.widget.gallery p
-{
-    padding: 10px;
-    color: #333333;
-}
-.widget.gallery ul.gallery-widget
-{
-    display:block;
-    background-color: @color-swatch2;
-    margin: 0;
-    padding: 20px 20px 0;
-    list-style: none;
-    min-height: 100px;
-    color: #555555;
-   
-}
-.widget.gallery ul.gallery-widget li
-{
-    display: inline-block;
-    background-color: @color-swatch1;
-    padding: 2%;
-    text-align: center;
-    overflow: hidden;
-    background-position:-9999px;
-    background-repeat: no-repeat;
-    margin-bottom: 20px;
-    width: 45%; 
-    font-family: @font-swatch4-font-family;
-    font-size: 12px;
-    line-height: 1.5em;
-}
-
-.widget.gallery ul.gallery-widget li:nth-child(2n) {
-  float: right;
-}
-
-.widget.gallery ul.gallery-widget li img {
-    width: 100%;
-    margin-bottom: 4px;
-}
-.widget.gallery ul.gallery-widget li span.title, ul.gallery-widget li span.description
-{
-    width: 100%;
-    text-align: center;
-}
-.widget.gallery ul.gallery-widget li span.title.visible, ul.gallery-widget li span.description.visible
-{
-    display:block;
-}
-.widget.gallery ul.gallery-widget li span.title {
-    font-weight: bold;
-    display: block;
-}
-.widget.gallery ul.gallery-widget li span.description {
-    color: lighten(@color-swatch5,2%);
-}
-
-/* Divider CSS */
-
-.widget.line {
-    padding: 20px 0;
-}
-
-hr.line {
-   background-color: darken(@color-swatch2,3%);
-   height: 1px;
-   width: 100%;
-   border: none;
-}
-
-hr.line.align-left {
-   margin: 20px auto 20px 0px;
-}
-
-hr.line.align-center {
-   margin: 20px auto;
-}
-
-hr.line.align-right {
-   margin: 20px 0px 20px auto;
-}
-
-
-/* ===============================
-   CLICK TO CALL
-   =============================== */
-
-.widget.clicktocall {
-    padding: 10px 0;
-}
-
-.widget.clicktocall a {
-  margin: 0;
-  background-image: image('/images/ic-desktop-call.png');
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 28px;
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch4-font-weight;
-  line-height: @font-swatch4-line-height;
-  color:@font-swatch4-color;
-}
-
-.widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-hov.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 28px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.widget.clicktocall a.justifyleft
-{
-    text-align: left;
-}
-
-.widget.clicktocall a.justifycenter
-{
-    text-align: center;
-}
-
-.widget.clicktocall a.justifyright
-{
-    text-align: right;
-}
-
-.widget.clicktocall a.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.clicktocall a.italic {
-    font-style: italic;
-}
-
-.widget.clicktocall a.bold {
-    font-weight: bold;
-}
-
-/* ===============================
-   REDIRECT WIDGET
-   =============================== */
-
-.widget.redirecttodesktop {
-    padding: 8px 0;
-}
-
-.widget.redirecttodesktop a {
-    padding-right: 30px;
-    padding-top: 2px;
-    background-image: image('/images/desktop.png');
-    background-repeat: no-repeat;
-    background-position: right center;
-    font-size: 12px;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    text-decoration: none;
-    cursor: pointer;
-    color: @font-swatch5-color;
-    font-family: @font-swatch5-font-family;
-
-}
-
-.widget.redirecttodesktop a:hover, .desktop a:active {
-    background-image: image('/images/desktop.png');
-    background-repeat: no-repeat;
-    background-position: right center;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-/* HEADER */
 
 header {
   padding: 20px 0;
@@ -476,11 +120,11 @@ header {
   border-bottom: 1px solid @color-swatch2;
 }
 
-header h1 {
+.widget.companyheader .company-name h1 {
+  font-size:(@font-swatch1-font-size * 0.6); /* 21.6px  */
+  line-height:(@font-swatch1-line-height * 0.8); /* 28.8px  */
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  letter-spacing: 6px;
 }
 
 .widget.companyheader {
@@ -522,10 +166,12 @@ header h1 {
 .widget.companyheader .company-name {
   display: block;
   float: left;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+   =============================== */
 
 footer {
   padding: 4em 0;
@@ -536,38 +182,15 @@ footer {
 
 footer h3 {
   color: @color-swatch1;
-  font-size: 24px;
+  font-size: @font-swatch3-font-size;
   padding-bottom: 20px;
 }
 
 footer p {
-  font-family: @font-swatch3-font-family;
+  font-family: @font-swatch5-font-family;
   color: lighten(@color-swatch5,10%);
-  line-height: 28px;
+  line-height:@font-swatch5-line-height;
   padding-bottom: 0;
-}
-
-footer span {
-  color: @color-swatch1;
-}
-
-footer section.footer2 {
-  border-top: 1px solid darken(@color-swatch5,10%);
-  padding: 2em 0;
-}
-
-footer section.footer2 .widget.responsivecolumns {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-footer section.footer2 .widget.responsivecolumns p {
-  font-size: 12px;
-  padding: 8px 0 0; 
-}
-
-footer section.footer2 .widget.responsivecolumns .columns-two-right {
-  text-align: right;
 }
 
 /* ===============================
@@ -727,7 +350,6 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
    =============================== */
 
 .widget.feature {
-  /*height: 500px;*/
   height: auto;
 }
 
@@ -753,7 +375,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 
 .widget.feature h2 {
   font-family:@font-swatch8-font-family;
-  font-size: @font-swatch8-font-size;
+  font-size:@font-swatch8-font-size;
   font-weight: @font-swatch8-font-weight;
   line-height:@font-swatch8-line-height;
   color: @font-swatch8-color;
@@ -840,13 +462,331 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
     margin-right: 5px;
 }
 
-/* Twitter CSS */
-/* 
-    Document   : twitter
-    Created on : 04-Jul-2012, 14:15:32
-    Author     : Dom
-    Description: Twitter modernwhite
-*/
+
+/* ===============================
+   BUTTON CSS
+   =============================== */
+
+.widget.button {
+    padding: 4px 0;
+}
+
+.widget.button button
+{
+  padding: 4px 8px;
+  margin: 1em auto;
+  border: 2px solid darken(@color-swatch3,5%);
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch3;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+}
+
+.widget.button button:hover 
+{
+  background-color: darken(@color-swatch3,5%);
+  cursor: pointer;
+}
+
+
+/* JUSTIFY */
+
+.widget.button button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.button button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.button button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.button button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.button button.btn.italic {
+    font-style: italic;
+}
+
+.widget.button button.btn.bold {
+    font-weight: bold;
+}
+
+.widget.button span {
+    vertical-align: center;
+}
+
+.widget.button i {
+    margin-right: 5px;
+}
+
+/* ===============================
+   CONTENT CSS
+   =============================== */
+
+
+.widget.content
+{
+    padding: 0;
+    overflow: hidden;
+}
+
+.widget.content span.expand
+{
+    font-family: @font-swatch3-font-family;
+    background-color: @color-swatch3;
+    color: @font-swatch7-color;
+    font-size: @font-swatch5-font-size;
+    padding: 4px 8px;
+    margin: 4px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.widget.content span.expand:hover,
+.widget.content span.expand:focus
+{
+    cursor: pointer;
+    background-color: darken(@color-swatch3,5%);
+}
+
+/* ===============================
+   IMAGE WIDGET
+   =============================== */
+
+.widget.image img
+{
+    display:block;
+    max-width: 100%;
+}
+
+.widget.image {
+}
+
+.widget.image span.image-title {
+    display: block;
+    margin:5px;
+    font-family: @font-swatch4-font-family;
+    font-weight: @font-swatch4-font-weight;
+    font-size: @font-swatch4-font-size;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: @font-swatch4-line-height;
+}
+
+.widget.image span.image-description {
+    display: block;
+    margin:5px;
+    text-align: center;
+    font-family: @font-swatch5-font-family;
+    font-weight: @font-swatch5-font-weight;
+    font-size: @font-swatch5-font-size;
+    line-height: @font-swatch5-line-height;
+}
+
+/* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+.widget.gallery
+{
+}
+.widget.gallery p
+{
+    padding: 10px;
+    color: #333333;
+}
+.widget.gallery ul.gallery-widget
+{
+    display:block;
+    background-color: @color-swatch2;
+    margin: 0;
+    padding: 20px 20px 0;
+    list-style: none;
+    min-height: 100px;
+    color: #555555;
+   
+}
+.widget.gallery ul.gallery-widget li
+{
+    display: inline-block;
+    background-color: @color-swatch1;
+    padding: 2%;
+    text-align: center;
+    overflow: hidden;
+    background-position:-9999px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    width: 45%; 
+    font-family: @font-swatch4-font-family;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.widget.gallery ul.gallery-widget li:nth-child(2n) {
+  float: right;
+}
+
+.widget.gallery ul.gallery-widget li img {
+    width: 100%;
+    margin-bottom: 4px;
+}
+.widget.gallery ul.gallery-widget li span.title, ul.gallery-widget li span.description
+{
+    width: 100%;
+    text-align: center;
+}
+.widget.gallery ul.gallery-widget li span.title.visible, ul.gallery-widget li span.description.visible
+{
+    display:block;
+}
+.widget.gallery ul.gallery-widget li span.title {
+    font-weight: bold;
+    display: block;
+}
+.widget.gallery ul.gallery-widget li span.description {
+    color: lighten(@color-swatch5,2%);
+}
+
+/* ===============================
+   DIVIDER WIDGET
+   =============================== */
+
+.widget.line {
+    padding: 20px 0;
+}
+
+hr.line {
+   background-color: darken(@color-swatch2,3%);
+   height: 1px;
+   width: 100%;
+   border: none;
+}
+
+hr.line.align-left {
+   margin: 20px auto 20px 0px;
+}
+
+hr.line.align-center {
+   margin: 20px auto;
+}
+
+hr.line.align-right {
+   margin: 20px 0px 20px auto;
+}
+
+
+/* ===============================
+   CLICK TO CALL WIDGET
+   =============================== */
+
+.widget.clicktocall {
+    padding: 10px 0;
+}
+
+.widget.clicktocall a {
+  margin: 0;
+  background-image: image('/images/ic-desktop-call.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+  font-family:@font-swatch4-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch4-font-weight;
+  line-height: @font-swatch4-line-height;
+  color:@font-swatch4-color;
+}
+
+.widget.clicktocall a:hover {
+    background-image: image('/images/ic-desktop-call-hov.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 28px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.widget.clicktocall a.justifyleft
+{
+    text-align: left;
+}
+
+.widget.clicktocall a.justifycenter
+{
+    text-align: center;
+}
+
+.widget.clicktocall a.justifyright
+{
+    text-align: right;
+}
+
+.widget.clicktocall a.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.clicktocall a.italic {
+    font-style: italic;
+}
+
+.widget.clicktocall a.bold {
+    font-weight: bold;
+}
+
+/* ===============================
+   REDIRECT WIDGET
+   =============================== */
+
+.widget.redirecttodesktop {
+    padding: 8px 0;
+}
+
+.widget.redirecttodesktop a {
+    padding-right: 30px;
+    padding-top: 2px;
+    background-image: image('/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-decoration: none;
+    cursor: pointer;
+    color: @font-swatch5-color;
+    font-family: @font-swatch5-font-family;
+
+}
+
+.widget.redirecttodesktop a:hover, .desktop a:active {
+    background-image: image('/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ===============================
+   TWITTER WIDGET
+   =============================== */
 
 
 .widget.twitter {
@@ -891,13 +831,8 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
     font-weight: bold;
 }
 
-.widget.twitter .twitter-content bk-full-name p {
-   
-}
-
-
 /* ===============================
-   CONTACT FORM
+   CONTACT FORM WIDGET
    =============================== */
 
 .widget.contactform form {
@@ -1006,7 +941,7 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 
 
 /* ===============================
-   TWEET THIS
+   TWEET THIS WIDGET
    =============================== */
 
 .widget.tweet {
@@ -1049,7 +984,9 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 }
 
 
-/* SOCIAL BAR */
+/* ===============================
+   SOCIAL BAR WIDGET
+   =============================== */
 
 .widget.socialicons {
     padding: 10px 0;
@@ -1093,7 +1030,6 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 .widget.socialicons span.bk-socialicons-youtube a {
     background-image: image('/hatch/images/socialicons-youtube.png');
 }
-
 
 
 /* ===============================
@@ -1193,8 +1129,8 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   }
 
   /* FEATURE */
+
   .widget.feature {
-    /*height: 350px;*/
     height: auto;
   }
 
@@ -1204,26 +1140,23 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   }
 
   .widget.feature .content {
- 
+    padding: 3.6em 0;
+    position: absolute;
+    bottom: 0;
   }
 
   .widget.feature .content .spare {
-    max-width: 690px;
-  }
-
-  .widget.feature button {
-    /*display: none;*/
-    /*margin: 1em auto;*/
+    max-width: 678px;
   }
 
   .widget.feature h2 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size:(@font-swatch8-font-size * 0.8); /* 40px */
+    line-height:(@font-swatch8-line-height * 0.8); /* 40px */
   }
 
   .widget.feature h3 {
-    font-size: 18px;
-    line-height: 30px;
+    font-size:(@font-swatch9-font-size * 0.8); /* 40px */
+    line-height:(@font-swatch9-line-height * 0.8); /* 40px */
   }
 
   .strap {
@@ -1233,7 +1166,6 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
   .strap h4 {
     font-size: 20px;
   }
-
 
 }
 
@@ -1344,18 +1276,22 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
     height: 210px;
   }
 
+  .widget.feature .content {
+    padding: 2.2em 0;
+  }
+
   .widget.feature .content .spare {
-    max-width: 300px;
+    max-width: 330px;
   }
 
   .widget.feature h2 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size:(@font-swatch8-font-size * 0.4); /* 20px */
+    line-height:(@font-swatch8-line-height * 0.6); /* 30px */
   }
-  .widget.feature h3
-   {
-    line-height: 24px;
-    /*display: none;*/
+
+  .widget.feature h3 {
+    font-size:(@font-swatch9-font-size * 0.6); /* 14.4px */
+    line-height:(@font-swatch9-line-height * 0.5); /* 25px */
   }
 
   .widget.feature button {
@@ -1452,3 +1388,6 @@ footer section.footer2 .widget.responsivecolumns .columns-two-right {
 .clearfix {
   *zoom: 1;
 }
+
+
+
