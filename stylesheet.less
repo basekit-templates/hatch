@@ -1,3 +1,8 @@
+/* SCALING FUNCTION */
+.scale-value ( @property, @value: 13, @scale : 1) {
+  @property:  (@value * @scale)px;
+}
+
 body {
   background-color: @color-swatch1;
   margin: 0;
@@ -241,7 +246,9 @@ footer p {
   color: @color-swatch3;
 }
 
-/* EXTENDED NAV */
+/* ===============================
+   EXTENDED NAVIGATION
+   =============================== */
 
 .widget.extendednavigation {
   float: right;
@@ -411,7 +418,7 @@ footer p {
   box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
 
   font-family: @font-swatch2-font-family;
-  font-size: 14px;
+  font-size: .9em;
   font-weight:@font-swatch7-font-weight;
   background-color: @color-swatch3;
   color: @color-swatch1;
@@ -462,6 +469,13 @@ footer p {
     margin-right: 5px;
 }
 
+/* ===============================
+   CLICK TO CALL - DOESN'T SHOW IN DESKTOP
+   =============================== */
+
+  .widget.clicktocall {
+     display:none;
+   }
 
 /* ===============================
    BUTTON CSS
@@ -714,6 +728,15 @@ hr.line.align-right {
   font-weight: @font-swatch4-font-weight;
   line-height: @font-swatch4-line-height;
   color:@font-swatch4-color;
+
+  font-family: @font-swatch2-font-family;
+  font-size:1.1em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch3;
+  color: @color-swatch1;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
 }
 
 .widget.clicktocall a:hover {
@@ -897,7 +920,7 @@ hr.line.align-right {
     box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
 
     font-family: @font-swatch2-font-family;
-    font-size: 12px;
+    font-size:1em;
     font-weight:@font-swatch7-font-weight;
     background-color: @color-swatch3;
     color: @color-swatch1;
@@ -964,7 +987,7 @@ hr.line.align-right {
   box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
 
   font-family: @font-swatch2-font-family;
-  font-size: 12px;
+  font-size:1em;
   font-weight:@font-swatch7-font-weight;
   background-color: #00BDEF;
   color: @color-swatch1;
@@ -991,7 +1014,7 @@ hr.line.align-right {
 .widget.socialicons {
     padding: 10px 0;
     text-align: center;
-    font-size: 12px;
+    font-size:1em;
     font-family:@font-swatch7-font-family;
 }
 
@@ -1008,27 +1031,117 @@ hr.line.align-right {
     background-repeat: no-repeat;
 }
 .widget.socialicons span.bk-socialicons-twitter a {
-    background-image: image('/hatch/images/socialicons-twitter.png')
+    background-image: image('/images/socialicons-twitter.png')
 }
 
 .widget.socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/hatch/images/socialicons-linkedin.png');
+    background-image: image('/images/socialicons-linkedin.png');
 }
 
 .widget.socialicons span.bk-socialicons-facebook a {
-    background-image: image('/hatch/images/socialicons-facebook.png');
+    background-image: image('/images/socialicons-facebook.png');
 }
 
 .widget.socialicons span.bk-socialicons-rss a {
-    background-image: image('/hatch/images/socialicons-rssfeed.png');
+    background-image: image('/images/socialicons-rssfeed.png');
 }
 
 .widget.socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/hatch/images/socialicons-googleplus.png');
+    background-image: image('/images/socialicons-googleplus.png');
 }
 
 .widget.socialicons span.bk-socialicons-youtube a {
-    background-image: image('/hatch/images/socialicons-youtube.png');
+    background-image: image('/images/socialicons-youtube.png');
+}
+/* ===============================
+   SLIDESHOW WIDGET
+   =============================== */
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next
+{
+  display: none;
+  position: absolute;
+  width: 14%;
+  height: 14%; 
+  font-size: 0;
+  z-index: 11;
+  text-indent: -99999px;  
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev
+{
+  left: 10px;
+  background: image('/images/slideshow-arrow-left.png') no-repeat center left;
+  background-size: contain;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-next
+{
+  right: 10px;
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right; 
+    background-size: contain;   
+}
+
+.widget.responsiveslideshow .slideshow-widget:hover .btn-prev, .widget.responsiveslideshow .slideshow-widget:hover .btn-next
+{
+  top: 43%;
+  display: block;
+  cursor: pointer;
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls
+{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.slideshow-empty {
+    padding: 10px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play
+{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  background: image('/images/slideshow-play.png') center no-repeat;
+  background-size: 100%;
+  width: 14%;
+  height: 14%;
+  top: 43%;
+  left: 43%;
+}
+
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play
+{
+  display:block;
+}
+
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
+{
+  background: image('/images/slideshow-pause.png') center no-repeat;
+  background-size: 100%;  
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls .dot
+{
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  display: inline-block;
+  background: image('/images/slideshow-dot-not-selected.png') center no-repeat;
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls .dot.selected
+{
+  background: image('/images/slideshow-dot-selected.png') center no-repeat;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev.disabled, .widget.responsiveslideshow .slideshow-widget .btn-next.disabled, .widget.responsiveslideshow .slideshow-widget .btn-play.disabled
+{
+  opacity:0.4;
+  cursor: default;
 }
 
 
@@ -1051,6 +1164,10 @@ hr.line.align-right {
 
   .widget.companyheader .company-name {
     text-align: center;
+  }
+
+  .widget.companyheader .company-name h1 {
+    font-size:(@font-swatch1-font-size * 0.8)
   }
 
   /* NAV */
@@ -1159,14 +1276,6 @@ hr.line.align-right {
     line-height:(@font-swatch9-line-height * 0.8); /* 40px */
   }
 
-  .strap {
-    padding: 50px 0 20px;
-  }
-
-  .strap h4 {
-    font-size: 20px;
-  }
-
 }
 
 /* ===============================
@@ -1174,6 +1283,11 @@ hr.line.align-right {
    =============================== */
 
 @media only screen and (max-width: 480px) {
+
+  /* COMPANY HEADER */
+  .widget.companyheader .company-name h1 {
+    font-size:(@font-swatch1-font-size * 0.6)
+  }
 
   /* NAV */
 
@@ -1268,7 +1382,6 @@ hr.line.align-right {
   /* FEATURE */
 
   .widget.feature {
-    /*height: 210px;*/
     height: auto;
   }
 
@@ -1298,24 +1411,41 @@ hr.line.align-right {
     display: none;
   }
 
-  .strap {
-    padding: 60px 0 30px;
-  }
-
-  .strap h4 {
-    font-size: 20px;
-  }
-
   /* CLICK TO CALL */
+  .widget.clicktocall a.justifyleft {
+    text-align: left;
+  }
+
+  .widget.clicktocall a.justifycenter {
+    text-align: center;
+  }
+
+  .widget.clicktocall a.justifyright {
+    text-align: right;
+  }
+
+  .widget.clicktocall a.justifyfull {
+    text-align: justify;
+  }
+
+  .widget.clicktocall a.italic { 
+    font-style: italic;
+  }
+
+  .widget.clicktocall a.bold {
+    font-weight: bold;
+  }
 
   .widget.clicktocall {
     padding: 20px 0;
+    display:block;
   }
 
   .widget.clicktocall a {
     background-image: image('/images/ic-desktop-call-mob.png');
     background-color: @color-swatch3;
     background-position: 10px;
+    background-repeat:no-repeat;
     padding: 10px 10px 10px 38px;
     margin: 2.2em auto;
     border: 2px solid darken(@color-swatch3,5%);
@@ -1325,7 +1455,7 @@ hr.line.align-right {
     box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
 
     font-family: @font-swatch2-font-family;
-    font-size: 12px;
+    font-size:1em;
     font-weight:@font-swatch7-font-weight;
     background-color: @color-swatch3;
     color: @color-swatch1;
@@ -1354,18 +1484,6 @@ hr.line.align-right {
   .widget.gallery ul.gallery-widget li
   {
     width: 96%;
-  }
-
-  .footer2 {
-    text-align: center;
-  }
-
-  .footer2 .columns-two-left {
-    margin: 0!important;
-  }
-
-  .footer2 p {
-    text-align: left!important;
   }
 
 }
