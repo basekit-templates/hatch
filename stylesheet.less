@@ -367,9 +367,9 @@ footer p {
 .widget.feature .content {
   margin: 0 auto;
   padding: 7em 0;
-
+  text-align: center;
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
 .widget.feature .content .spare {
@@ -387,8 +387,6 @@ footer p {
   line-height:@font-swatch8-line-height;
   color: @font-swatch8-color;
   letter-spacing: @font-swatch8-letter-spacing;
-  text-align: center;
-
 }
 
 /* FEATURE STRAPLINE */
@@ -400,17 +398,20 @@ footer p {
   line-height:@font-swatch9-line-height;
   color: @font-swatch9-color;
   letter-spacing: @font-swatch9-letter-spacing;
-  text-align: center;
   padding-bottom: 0;
 }
 
 /* FEATURE BUTTON */
 
+.widget.feature .feature-btn {
+  max-width: 960px;
+  display: block;
+  margin: 1.8em auto;
+}
+
 .widget.feature button
 {
-  display: block;
   padding: 14px 24px;
-  margin: 2em auto;
   border: 0;
   -webkit-border-radius: 30px;
      -moz-border-radius: 30px;
@@ -467,6 +468,31 @@ footer p {
 
 .widget.feature button i {
     margin-right: 5px;
+}
+
+/* ===============================
+   FEATURE LAYOUTS
+   =============================== */
+
+/* LEFT ALIGN */
+
+.widget.feature.align-left .content {
+  width: 100%;
+  text-align: left;
+}
+
+/* CENTER ALIGN */
+
+.widget.feature.align-center .content {
+  width: 100%;
+  text-align: center;
+}
+
+/* RIGHT ALIGN */
+
+.widget.feature.align-right .content {
+  width: 100%;
+  text-align: right;
 }
 
 /* ===============================
@@ -1274,6 +1300,10 @@ hr.line.align-right {
   .widget.feature h3 {
     font-size:(@font-swatch9-font-size * 0.8); /* 40px */
     line-height:(@font-swatch9-line-height * 0.8); /* 40px */
+  }
+
+  .widget.feature .feature-btn {
+    max-width: 678px;
   }
 
 }
