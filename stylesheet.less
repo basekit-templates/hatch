@@ -356,26 +356,13 @@ footer p {
    FEATURE
    =============================== */
 
-.widget.feature {
-  height: auto;
-}
-
-.widget.feature .bgimage {
-  height: 500px;
-}
+.widget.feature .feature-bgimg {
+  height: 500px; /* should be in media query*/
+ }
 
 .widget.feature .content {
-  margin: 0 auto;
-  padding: 7em 0;
   text-align: center;
-  position: absolute;
-  top: 0;
-}
-
-.widget.feature .content .spare {
-  max-width: 960px;
-  display: block;
-  margin: 0 auto;
+  height: 500px;
 }
 
 /* FEATURE TITLE */
@@ -401,16 +388,9 @@ footer p {
   padding-bottom: 0;
 }
 
-/* FEATURE BUTTON */
-
-.widget.feature .feature-btn {
-  max-width: 960px;
-  display: block;
-  margin: 1.8em auto;
-}
-
 .widget.feature button
 {
+  margin: 2em 0;
   padding: 14px 24px;
   border: 0;
   -webkit-border-radius: 30px;
@@ -493,6 +473,21 @@ footer p {
 .widget.feature.align-right .content {
   width: 100%;
   text-align: right;
+}
+
+/* BUTTON BOTTOM RIGHT */
+
+.widget.feature.btn-bottom-right .content{
+  width: 100%;
+  text-align: left;
+}
+
+.widget.feature.btn-bottom-right h3 {
+  vertical-align: middle;
+}
+
+.widget.feature.btn-bottom-right button {
+  vertical-align: middle;
 }
 
 /* ===============================
@@ -1273,23 +1268,12 @@ hr.line.align-right {
 
   /* FEATURE */
 
-  .widget.feature {
-    height: auto;
-  }
-
-
-  .widget.feature .bgimage {
-    height: 350px;
-  }
+   .widget.feature .feature-bgimg {
+    height: 300px; 
+    }
 
   .widget.feature .content {
-    padding: 3.6em 0;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .widget.feature .content .spare {
-    max-width: 678px;
+    height: 300px;
   }
 
   .widget.feature h2 {
@@ -1302,10 +1286,10 @@ hr.line.align-right {
     line-height:(@font-swatch9-line-height * 0.8); /* 40px */
   }
 
-  .widget.feature .feature-btn {
-    max-width: 678px;
+    .widget.feature button {
+      font-size: .8em;
+      padding: 10px 14px;
   }
-
 }
 
 /* ===============================
@@ -1411,20 +1395,13 @@ hr.line.align-right {
 
   /* FEATURE */
 
-  .widget.feature {
-    height: auto;
-  }
-
-  .widget.feature .bgimage {
-    height: 169px;
-  }
+  .widget.feature .feature-bgimg {
+    height: 220px; /* should be in media query*/
+   }
 
   .widget.feature .content {
-    padding: 1em 0 2em;
-  }
-
-  .widget.feature .content .spare {
-    max-width: 285px;
+    height: 220px;
+    /*padding: 1.5em 0;*/
   }
 
   .widget.feature h2 {
@@ -1439,7 +1416,9 @@ hr.line.align-right {
   }
 
   .widget.feature button {
-    display: none;
+    margin: 1em 0; 
+    font-size: .7em;
+    padding: 8px 12px;
   }
 
   /* CLICK TO CALL */
