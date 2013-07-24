@@ -3,6 +3,8 @@
 	"thumbnail":"hatch.png",
 	"screenshot":"hatch.png",
 	"pageTypes":["home"],
+	"defaultColorSwatch":"Warmth 2",
+	"defaultFontSwatch":"Lato",
 	"colorSwatches":
     {
         "Swatch 1": {
