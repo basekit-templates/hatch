@@ -75,30 +75,46 @@ p
   letter-spacing: @font-swatch5-letter-spacing;
 }
 
+ul,
+ol,
+li {
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
 blockquote {
-  background:@color-swatch2;
-  border-left:6px solid darken(@color-swatch2,10%);
-  margin:0;
-  padding: 14px 16px;
-  quotes:"\201C""\201D""\2018""\2019";
+    margin: 7px 0;
+    padding: 0;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @font-swatch5-color;
 }
-  blockquote:before {
-  font-family: georgia;
-  color:darken(@color-swatch2,20%);
-  content:open-quote;
-  font-size:4em;
-  line-height:.1em;
-  margin-right:.1em;
-  vertical-align:-.4em;
+
+blockquote:before {
+    font-family: georgia;
+    color: @font-swatch5-color;
+    content: open-quote;
+    font-size: 4em;
+    line-height: .1em;
+    margin-right: 10px;
+    vertical-align: -.4em;
 }
-  blockquote p {
-  display: inline;
-  font-style: italic;
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
+
+blockquote:after {
+    font-family: georgia;
+    color: @font-swatch5-color;
+    content: close-quote;
+    font-size: 4em;
+    line-height: .1em;
+    margin-left: 10px;
+    vertical-align: -.4em;
 }
 
 
@@ -111,62 +127,68 @@ section.main {
 }
 
 /* ===============================
+   CUSTOM CSS
+   =============================== */
+
+.main {
+    padding: 2em 0
+}
+
+body.edit .widget.navigation, body.edit .widget.extendednavigation {
+    overflow: visible;
+}
+
+/* DEFAULT PAGE TYPE */
+
+.bk-pt-default header {
+    border-bottom: 1px solid @color-swatch2;
+    margin-bottom: 20px;
+}
+
+/* ===============================
    HEADER
    =============================== */
 
 header {
-  padding: 20px 0;
-  background-color: @color-swatch7;
-  border-bottom: 1px solid @color-swatch2;
+    padding: 30px 0;
+    background-color: @color-swatch7;
 }
 
-.widget.companyheader .company-name h1 {
-  font-size:(@font-swatch1-font-size * 0.6); /* 21.6px  */
-  line-height:(@font-swatch1-line-height * 0.8); /* 28.8px  */
-  margin: 0;
-  padding: 0;
+.companyheader {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 6px 0 0;
 }
 
-.widget.companyheader {
-  float: left;
-  overflow-x: auto;
-  overflow-y: hidden;
+/* COMPANY NAME */
+
+.widget.companyname {
+    display: block;
+    float: left;
 }
 
-.widget.companyheader .logo {
-  display: block;
-  float: left;
-  margin-right: 6px;
-  margin-top: 8px;
+.widget.companyname a {
+    font-family: @font-swatch10-font-family;
+    font-weight: @font-swatch10-font-weight;
+    color: @font-swatch10-color;
+    line-height: @font-swatch10-line-height;
+    letter-spacing: @font-swatch10-letter-spacing;
+    font-size: @font-swatch10-font-size;
+    text-transform: uppercase;
 }
 
-.widget.companyheader:before,
-.widget.companyheader:after {
-  content: " ";
-  display: table;
+.widget.companyname a:hover {
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.widget.companyheader:after {
-  clear: both;
-}
+/* LOGO */
 
-.widget.companyheader {
-  *zoom: 1;
-}
-
-.widget.companyheader .logo img {
-  max-width: 100%;
-  height: auto;
-}
-
-.widget.companyheader .logo-bottom {
-  display: none;
-}
-
-.widget.companyheader .company-name {
-  display: block;
-  float: left;
-  margin-top: 6px;
+.widget.logo {
+    display: block;
+    float: left;
+    margin-right: 10px;
 }
 
 /* ===============================
@@ -187,6 +209,7 @@ footer h1, footer h2, footer h3, footer h4 {
 
 footer p {
   font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
   color: lighten(@color-swatch5,10%);
   line-height:@font-swatch5-line-height;
   padding-bottom: 5px;
@@ -252,7 +275,7 @@ footer p {
 .widget.extendednavigation ul {
   float: left;
   padding: 0;
-  margin: 4px 0 0;
+  margin: 0;
 }
 
 .widget.extendednavigation ul.align-center li
@@ -289,6 +312,7 @@ footer p {
   color: @font-swatch6-color;
   line-height:@font-swatch6-line-height;
   letter-spacing: @font-swatch6-letter-spacing;
+  text-transform: uppercase;
 }
 
 .widget.extendednavigation ul li a:hover {
@@ -330,16 +354,17 @@ footer p {
   text-align: left;
 }
 
-.widget.extendednavigation li:hover > ul > li > a {
+.widget.extendednavigation li:hover > ul li a {
   display: block;
   background-image: none;
   color: @color-swatch5;
-  padding: 14px;
+  padding: 0 ;
   margin-left: 0;
 }
 
 .widget.extendednavigation li:hover > ul > li > a .text {
   margin-left: 0;
+  text-transform: none;
 }
 
 .widget.extendednavigation li:hover > ul > li > a:hover {
@@ -391,15 +416,15 @@ footer p {
      -moz-border-radius: 30px;
           border-radius: 30px;
   box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+  text-transform: uppercase;
 
-  font-family: @font-swatch2-font-family;
-  font-size: .9em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch3;
-  color: @color-swatch1;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight: @font-swatch7-font-weight;
+  line-height: @font-swatch7-line-height;
+  color: @font-swatch7-color;
+  letter-spacing: @font-swatch7-letter-spacing;
+  background-color: @font-swatch7-background-color;
 }
 
 .widget.feature button:hover 
@@ -517,6 +542,7 @@ footer p {
   color: @font-swatch7-color;
   text-decoration: none;
   letter-spacing: 1px;
+  text-transform: uppercase;
   text-shadow: 0 1px 0px rgba(0,0,0,0.3);
 }
 
@@ -602,10 +628,11 @@ footer p {
    IMAGE WIDGET
    =============================== */
 
-.widget.image img
-{
-    display:block;
+.widget.image img {
+    display: block;
     max-width: 100%;
+    border: 0;
+    border-width: 0;
 }
 
 .widget.image {
@@ -636,131 +663,143 @@ footer p {
    GALLERY WIDGET
    =============================== */
 
-.widget.gallery
-{
-}
-.widget.gallery p
-{
-    padding: 10px;
-    color: #333333;
-}
-.widget.gallery ul.gallery-widget
-{
-    display:block;
-    background-color: @color-swatch2;
-    margin: 0;
-    padding: 20px 20px 0;
-    list-style: none;
-    min-height: 100px;
-    color: #555555;
-   
-}
-.widget.gallery ul.gallery-widget li
-{
-    display: inline-block;
-    background-color: @color-swatch1;
-    padding: 2%;
-    text-align: center;
-    overflow: hidden;
-    background-position:-9999px;
-    background-repeat: no-repeat;
-    margin-bottom: 20px;
-    width: 45%; 
-    font-family: @font-swatch4-font-family;
-    font-size: 12px;
-    line-height: 1.5em;
+.widget.gallery {
+    width: 101.2%;
+    margin-left: -0.5%;
 }
 
-.widget.gallery ul.gallery-widget li:nth-child(2n) {
-  float: right;
-}
-
-.widget.gallery ul.gallery-widget li img {
-    width: 100%;
-    margin-bottom: 4px;
-}
-.widget.gallery ul.gallery-widget li span.title, ul.gallery-widget li span.description
-{
-    width: 100%;
-    text-align: center;
-}
-.widget.gallery ul.gallery-widget li span.title.visible, ul.gallery-widget li span.description.visible
-{
-    display:block;
-}
-.widget.gallery ul.gallery-widget li span.title {
-    font-weight: bold;
+.widget.gallery ul {
     display: block;
-}
-.widget.gallery ul.gallery-widget li span.description {
-    color: lighten(@color-swatch5,2%);
-}
-
-/* ===============================
-   DIVIDER WIDGET
-   =============================== */
-
-.widget.line {
-    padding: 20px 0;
+    margin: 0;
+    padding: 0px;
+    list-style: none;
 }
 
-hr.line {
-   background-color: darken(@color-swatch2,3%);
-   height: 1px;
-   width: 100%;
-   border: none;
+.widget.gallery li {
+    float: left;
+    position: relative;
+    width: 33.3%;
+    padding-bottom: 33%;
 }
 
-hr.line.align-left {
-   margin: 20px auto 20px 0px;
+.widget.gallery li  span.inner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: @color-swatch1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-hr.line.align-center {
-   margin: 20px auto;
+.widget.gallery ul li.one-to-one span.inner {
+    background-size: 100% 100%
 }
 
-hr.line.align-right {
-   margin: 20px 0px 20px auto;
+.widget.gallery ul li.portrait span.inner {
+    background-size: 100% auto
 }
 
+.widget.gallery ul li.landscape span.inner {
+    background-size: auto 100%
+}
 
-/* ===============================
-   CLICK TO CALL WIDGET
-   =============================== */
+.widget.gallery li span.inner {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 0px;
+    bottom: 16px;
+    overflow: hidden;
+}
+
+.widget.gallery li span.inner img {
+    display: none
+}
+
+.widget.gallery ul:before,
+.widget.gallery ul:after {
+    content: " ";
+    display: table;
+}
+
+.widget.gallery ul:after {
+    clear: both
+}
+
+.widget.gallery ul {
+    *zoom: 1
+}
+
+.widget.gallery li span.inner .title,
+.widget.gallery li span.inner .description {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: -50px;
+    background: @color-swatch1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @color-swatch1;
+    letter-spacing: @font-swatch5-letter-spacing;
+    text-transform: uppercase;
+}
+
+.widget.gallery li span.inner:hover .title {
+    margin-bottom: 0
+}
+
+.widget.gallery li span.inner .description {
+    display: none
+}
+
+.widget.gallery li span.inner a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* =======================================
+   CLICK TO CALL
+   ==================================== */
 
 .widget.clicktocall {
-    padding: 10px 0;
+    padding: 8px 0
 }
 
 .widget.clicktocall a {
-  margin: 0;
-  background-image: image('/images/ic-desktop-call.png');
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 28px;
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch4-font-weight;
-  line-height: @font-swatch4-line-height;
-  color:@font-swatch4-color;
-
-  font-family: @font-swatch2-font-family;
-  font-size:1.1em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch3;
-  color: @color-swatch1;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    background-image: image('/images/ic-call-desktop.svg');
+    background-size: 7px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 4px 0 4px 18px;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+    text-decoration: none;
 }
 
 .widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-hov.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 28px;
     cursor: pointer;
-    text-decoration: none;
+}
+
+.widget.clicktocall a:active {
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
 }
 
 .widget.clicktocall a.justifyleft
@@ -790,6 +829,34 @@ hr.line.align-right {
 .widget.clicktocall a.bold {
     font-weight: bold;
 }
+
+/* ===============================
+   DIVIDER WIDGET
+   =============================== */
+
+.widget.line {
+    padding: 20px 0;
+}
+
+hr.line {
+   background-color: darken(@color-swatch2,3%);
+   height: 1px;
+   width: 100%;
+   border: none;
+}
+
+hr.line.align-left {
+   margin: 20px auto 20px 0px;
+}
+
+hr.line.align-center {
+   margin: 20px auto;
+}
+
+hr.line.align-right {
+   margin: 20px 0px 20px auto;
+}
+
 
 /* ===============================
    REDIRECT WIDGET
@@ -942,6 +1009,7 @@ hr.line.align-right {
     text-decoration: none;
     letter-spacing: 1px;
     text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    text-transform: uppercase;
 }
   
 .widget.contactform fieldset button.btn:hover {
@@ -977,185 +1045,437 @@ hr.line.align-right {
     font-weight: bold;
 }
 
-
 /* ===============================
-   TWEET THIS WIDGET
+   TWEET THIS
    =============================== */
 
 .widget.tweet {
-   padding: 14px 0; 
+    padding: 6px 0
 }
 
 .widget.tweet a {
-  padding: 8px 13px 8px 38px;
-  margin: 0;
-  border: none;
-  background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 13px 9px;
+    background-image: image('/images/socialicons-twitter.svg');
+    background-size: 21px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-color: @font-swatch7-background-color;
 
-  margin: 2.2em auto;
-  border: 0;
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
-
-  font-family: @font-swatch2-font-family;
-  font-size:1em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: #00BDEF;
-  color: @color-swatch1;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    font-family: @font-swatch7-font-family;
+    font-size: .75em;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    color: @font-swatch7-color;
+    letter-spacing: @font-swatch7-letter-spacing;
+    background-color: @font-swatch7-background-color;
+    padding: 11px 12px 11px 38px;
+    border: 0;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
 }
 
-.widget.tweet a:hover, .tweet a:active {
-  padding: 8px 13px 8px 38px;
-  background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 13px 9px;
-  cursor: pointer;
-  background-color: #00aedc;
-  cursor: pointer;
+.widget.tweet a:hover {
+    background-color: @font-swatch7-background-color-hover;
+    cursor: pointer;
+}
+
+.widget.tweet a:active {
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
 }
 
 
-/* ===============================
-   SOCIAL BAR WIDGET
+/* ==================================
+   SOCIAL BAR WIDGET / SOCIAL PROFILE
    =============================== */
 
-.widget.socialicons {
-    padding: 0px;
-    font-size:1em;
-    font-family:@font-swatch7-font-family;
+.widget.socialicons,
+.widget.profile .bk-profile-socialicons {
+    padding: 10px 0;
+    font-size: 1em;
+    font-family: @font-swatch7-font-family;
 }
 
-.widget.socialicons a {
+.widget.socialicons a,
+.widget.profile .bk-profile-socialicons a {
     text-decoration: none;
     text-indent: -9999px;
-    height: 32px;
-    width: 32px;
 }
 
-.widget.socialicons span a {
+.widget.profile .bk-profile-socialicons span {
+    display: inline-block
+}
+
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a {
     display: inline-block;
     margin-right: 6px;
+    margin-bottom: 8px;
+    background-size: 18px;
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: @font-swatch7-background-color;
     background-repeat: no-repeat;
-}
-.widget.socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/socialicons-twitter.png')
+    background-position: center;
 }
 
-.widget.socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/socialicons-linkedin.png');
+.widget.profile .bk-profile-socialicons span a {
+    background-color: @font-swatch7-background-color;
+    box-shadow: 0 0 0 3px rgba(110,110,110,0.3);
+    margin-right: 10px;
 }
 
-.widget.socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/socialicons-facebook.png');
+/* FOOTER 2 */
+
+footer .footer2 .widget.profile .bk-profile-socialicons span a {
+    width: 26px;
+    height: 26px;
+    background-size: 15px;
+    margin-right: 7px;
 }
 
-.widget.socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/socialicons-rssfeed.png');
+footer .footer2 .columns-two-right .widget.profile .bk-profile-socialicons span a {
+    text-align: left;
 }
 
-.widget.socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/socialicons-googleplus.png');
+footer .footer2 .widget.profile .bk-profile-socialicons {
+    padding: 2px 0;
 }
 
-.widget.socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/socialicons-youtube.png');
+.widget.socialicons span a:hover,
+.widget.profile 
+.bk-profile-socialicons span a:hover {
+    background-color: @font-swatch7-background-color-hover
 }
+
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/socialicons-twitter.svg')
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/socialicons-linkedin.svg')
+}
+
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/socialicons-facebook.svg')
+}
+
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/socialicons-rss.svg')
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/socialicons-googleplus.svg')
+}
+
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/socialicons-youtube.svg')
+}
+
+/* ===============================
+   PROFILE WIDGET
+   =============================== */
+
+.widget.profile span,
+.widget.profile a {
+    display: block;
+    font-size: @font-swatch5-font-size;
+    font-family: @font-swatch5-font-family;
+    color: lighten(@color-swatch5,10%);
+    line-height: @font-swatch5-line-height;
+    font-weight: @font-swatch5-font-weight;
+}
+
+.widget.profile a:hover {
+    color: @color-swatch3;
+    text-decoration: none;
+}
+
+/* FOOTER PROFILE - TWITTER */
+
+.widget.profile ul.twitter {
+    padding: 0px;
+    margin: 0px;
+}
+
+.widget.profile ul.twitter li {
+    list-style: none
+}
+
+.widget.profile ul.twitter img,
+.widget.profile ul.twitter time,
+.widget.profile ul.twitter span {
+    display: none
+}
+
+/* FOOTER PROFILE - SIGNUP FORM */
+
+.widget.profile form {
+  padding: 0 0 20px;
+}
+
+footer .footer2 .widget.profile form {
+  padding: 0 0 8px;
+}
+
+.widget.profile form fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.profile form label {
+  display: none;
+  width: 100%;
+  float: left;
+  margin-bottom: 6px;
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: 300;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,15%);
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.profile form input {
+  height: 44px;
+  background-color: @color-swatch4;
+  border: 0;
+  margin: 0;
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: 300;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,25%);
+  letter-spacing: @font-swatch5-letter-spacing;
+  text-indent: 16px;
+  -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+        border-radius: 3px;
+}
+
+.widget.profile form input:focus {
+    outline: none;
+}
+
+.widget.profile form button {
+    font-family: @font-swatch7-font-family;
+    font-size: .8em;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    color: @font-swatch7-color;
+    letter-spacing: @font-swatch7-letter-spacing;
+    background-color: @font-swatch7-background-color;
+    padding: 7px 16px;
+    border: 1px solid darken(@color-swatch3,8%);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
+}
+
+.widget.profile form button:hover {
+    background-color: @font-swatch7-background-color-hover;
+    cursor: pointer;
+}
+
+/* ===============================
+   MAP WIDGET
+   =============================== */
+
+.widget.map {
+
+}
+
+/* ===============================
+   SIGNUP FORM WIDGET
+   =============================== */
+
+.widget.signupform {
+  padding: 0px;
+}
+
+.widget.signupform fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.signupform label {
+    float: left;
+    width: 100%;
+    margin-bottom: 2px;
+    font-family:@font-swatch5-font-family;
+    font-size:font-swatch5-font-size;
+    font-weight:@font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+    letter-spacing:@font-swatch5-letter-spacing;
+}
+
+.widget.signupform fieldset input {
+    height: 44px;
+    background-color: @color-swatch2;
+    border: 0;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.widget.signupform fieldset input:focus {
+  outline: none;
+}
+
+.widget.signupform button {
+    font-family: @font-swatch7-font-family;
+    font-size: .8em;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    color: @font-swatch7-color;
+    letter-spacing: @font-swatch7-letter-spacing;
+    background-color: @font-swatch7-background-color;
+    padding: 8px 16px;
+    border: 1px solid darken(@color-swatch3,5%);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
+}
+
+.widget.signupform button:hover {
+    background-color: @font-swatch7-background-color-hover;
+    cursor: pointer;
+}
+
+.widget.signupform button:active {
+  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
+}
+
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
-
-.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next
-{
-  display: none;
-  position: absolute;
-  width: 14%;
-  height: 14%; 
-  font-size: 0;
-  z-index: 11;
-  text-indent: -99999px;  
+.widget.responsiveslideshow .slideshow-image-list {
+    height: 300px;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev
-{
+.widget.responsiveslideshow .slideshow-widget {
+    background-color: lighten(@color-swatch5,17%);
+}
+.widget.responsiveslideshow span.inner img {
+    width:auto;
+    height:100%;
+}
+
+.widget.responsiveslideshow .image-wrapper {
+    padding:15px;
+}
+
+.widget.responsiveslideshow .crop .image-wrapper {
+    padding:0;
+}
+
+.widget.responsiveslideshow .content-wrapper {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:auto;
+    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1); 
+}
+
+.widget.responsiveslideshow .slideshow-image-list {
+    height:450px;
+  }
+
+.widget.responsiveslideshow .title {
+    display: inline-block;
+    padding:5px 20px 0 20px;
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:bkscale(@font-swatch5-line-height, 0.55);
+    color: @color-swatch1;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.responsiveslideshow .description {
+    display: block;
+    padding: 6px 20px;
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:bkscale(@font-swatch5-line-height, 0.55);
+    color: @color-swatch1;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev, 
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+    font-size: 0;
+    z-index: 11;
+    text-indent: -99999px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev {
   left: 10px;
   background: image('/images/slideshow-arrow-left.png') no-repeat center left;
-  background-size: contain;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-next
-{
+.widget.responsiveslideshow .slideshow-widget .btn-next {
   right: 10px;
-  background: image('/images/slideshow-arrow-right.png') no-repeat center right; 
-    background-size: contain;   
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right;   
 }
 
-.widget.responsiveslideshow .slideshow-widget:hover .btn-prev, .widget.responsiveslideshow .slideshow-widget:hover .btn-next
-{
-  top: 43%;
-  display: block;
-  cursor: pointer;
-}
-
-.widget.responsiveslideshow .slideshow-widget-controls
-{
+.widget.responsiveslideshow .slideshow-widget-controls {
   margin-top: 10px;
-  text-align: center;
-}
-
-.slideshow-empty {
-    padding: 10px;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-play
 {
-  display: none;
-  position: absolute;
-  cursor: pointer;
-  z-index: 10;
-  background: image('/images/slideshow-play.png') center no-repeat;
-  background-size: 100%;
-  width: 14%;
-  height: 14%;
-  top: 43%;
-  left: 43%;
-}
-
-.widget.responsiveslideshow .slideshow-widget:hover .btn-play
-{
-  display:block;
+    background: image('/images/slideshow-play.png') center no-repeat;
+    background-size: 100%;
+    border-radius:10px;
+    font-size:0;
+    text-indent: -99999px;
 }
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
-  background: image('/images/slideshow-pause.png') center no-repeat;
-  background-size: 100%;  
+    background: image('/images/slideshow-pause.png') center no-repeat;
+    background-size: 100%;  
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
 {
-  width: 14px;
-  height: 14px;
-  line-height: 14px;
-  display: inline-block;
-  background: image('/images/slideshow-dot-not-selected.png') center no-repeat;
+    border:none;
+    background:transparent image('/images/slideshow-dot-not-selected.png') center no-repeat;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot.selected
 {
-  background: image('/images/slideshow-dot-selected.png') center no-repeat;
-}
-
-.widget.responsiveslideshow .slideshow-widget .btn-prev.disabled, .widget.responsiveslideshow .slideshow-widget .btn-next.disabled, .widget.responsiveslideshow .slideshow-widget .btn-play.disabled
-{
-  opacity:0.4;
-  cursor: default;
+    background:transparent image('/images/slideshow-dot-selected.png') center no-repeat;
 }
 
 
@@ -1283,6 +1603,14 @@ hr.line.align-right {
       font-size: .8em;
       padding: 10px 14px;
   }
+
+    /* SLIDESHOW */
+
+    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-widget {
+        height:350px;
+    }
+
 }
 
 /* ===============================
@@ -1388,106 +1716,79 @@ hr.line.align-right {
 
   /* FEATURE */
 
-  .widget.feature .feature-bgimg {
-    height: 220px; /* should be in media query*/
-   }
+    .widget.feature .feature-bgimg {
+        height: 220px;
+    }
 
-  .widget.feature .content {
-    height: 220px;
-    /*padding: 1.5em 0;*/
-  }
+    .widget.feature .content {
+        height: 220px;
+    }
 
-  .widget.feature h2 {
-    font-size:(@font-swatch8-font-size * 0.4); /* 20px */
-    line-height:(@font-swatch8-line-height * 0.6); /* 30px */
-    padding-bottom: 4px;
-  }
+    .widget.feature h2 {
+        font-size: bkscale(@font-swatch8-font-size,0.6);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
+    }
 
-  .widget.feature h3 {
-    font-size:(@font-swatch9-font-size * 0.6); /* 14.4px */
-    line-height:(@font-swatch9-line-height * 0.5); /* 25px */
-  }
+    .widget.feature h3 {
+        font-size: bkscale(@font-swatch9-font-size,0.7);
+        line-height: bkscale(@font-swatch9-line-height,0.7);
+    }
 
-  .widget.feature button {
-    margin: 1em 0; 
-    font-size: .7em;
-    padding: 8px 12px;
-  }
+    .widget.feature .feature-btn button {
+        padding: 4px 10px;
+        font-size: .7em;
+    }
 
-  /* CLICK TO CALL */
-  .widget.clicktocall a.justifyleft {
-    text-align: left;
-  }
+    /* CLICK TO CALL */
 
-  .widget.clicktocall a.justifycenter {
-    text-align: center;
-  }
+    .widget.clicktocall a {
+        background-image: image('/images/ic-call.svg');
+        background-size: 7px;
+        background-position: 14px center;
+        background-repeat: no-repeat;
+        background-color: @font-swatch7-background-color;
 
-  .widget.clicktocall a.justifyright {
-    text-align: right;
-  }
+        font-family: @font-swatch7-font-family;
+        font-size: .75em;
+        font-weight: @font-swatch7-font-weight;
+        line-height: @font-swatch7-line-height;
+        color: @font-swatch7-color;
+        letter-spacing: @font-swatch7-letter-spacing;
+        background-color: @font-swatch7-background-color;
+        padding: 12px 12px 12px 34px;
+        border: 1px solid darken(@color-swatch3,5%);
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.2);
+        text-transform: uppercase;
+        text-decoration: none;
+        text-shadow: 0 1px 0px rgba(0,0,0,0.2);
+    }
 
-  .widget.clicktocall a.justifyfull {
-    text-align: justify;
-  }
+    .widget.clicktocall a:hover {
+        background-color: @font-swatch7-background-color-hover;
+        cursor: pointer;
+    }
 
-  .widget.clicktocall a.italic { 
-    font-style: italic;
-  }
+    .widget.clicktocall a:active {
+        box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
+    }
 
-  .widget.clicktocall a.bold {
-    font-weight: bold;
-  }
+     /* SLIDESHOW */
 
-  .widget.clicktocall {
-    padding: 20px 0;
-    display:block;
-  }
+    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-widget {
+        height:280px;
+    }
 
-  .widget.clicktocall a {
-    background-image: image('/images/ic-desktop-call-mob.png');
-    background-color: @color-swatch3;
-    background-position: 10px;
-    background-repeat:no-repeat;
-    padding: 10px 10px 10px 38px;
-    margin: 2.2em auto;
-    border: 2px solid darken(@color-swatch3,5%);
-    -webkit-border-radius: 30px;
-       -moz-border-radius: 30px;
-            border-radius: 30px;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    /* GALLERY */
 
-    font-family: @font-swatch2-font-family;
-    font-size:1em;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @color-swatch3;
-    color: @color-swatch1;
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
-  }
-
-  .widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-mob.png');
-    background-color: darken(@color-swatch3,2%);
-    background-position: 10px;
-    color: @color-swatch1;
-    padding: 10px 10px 10px 38px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  /* GALLERY */
-
-  .widget.gallery p
-  {
-    padding: 10px;
-  }
-
-  .widget.gallery ul.gallery-widget li
-  {
-    width: 96%;
-  }
+    .widget.gallery ul.gallery-widget li
+    {
+      width: 50%;
+      padding-bottom: 50%;
+    }
 
 }
 

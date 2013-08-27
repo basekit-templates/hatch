@@ -2,7 +2,6 @@
 	"name":"Hatch",
 	"thumbnail":"hatch.png",
 	"screenshot":"hatch.png",
-	"pageTypes":["home"],
 	"colorSwatches":
     {
         "Swatch 1": {
@@ -55,9 +54,9 @@
        "title": "Lato",
         "font1": {
             "font-family": "Lato",
-            "font-size": "21px",
-            "font-weight": "300",
-            "line-height": "28px",
+            "font-size": "32px",
+            "font-weight": "inherit",
+            "line-height": "32px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -89,18 +88,18 @@
             "font-family": "Lato",
             "font-size": "14px",
             "font-weight": "inherit",
-            "line-height": "36px",
-            "color": "@color-swatch4",
+            "line-height": "30px",
+            "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font6": {
             "font-family": "Lato",
-            "font-size": "15px",
+            "font-size": "13px",
             "font-weight": "inherit",
             "line-height": "28px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch6",
-            "letter-spacing": "inherit",
+            "letter-spacing": "1px",
             "background-color": "@color-swatch3",
             "background-color-hover": "@color-swatch3"
         },
@@ -110,9 +109,9 @@
             "font-weight": "inherit",
             "line-height": "26px",
             "color": "@color-swatch1",
-            "letter-spacing": "inherit",
-            "background-color": "@color-swatch2",
-            "background-color-hover": "@color-swatch7"
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
             "font-family": "Lato",
@@ -129,6 +128,14 @@
             "line-height": "36px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Lato",
+            "font-size": "21px",
+            "font-weight": "300",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "6px"
         }
     }
 }
