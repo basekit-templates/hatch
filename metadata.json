@@ -15,38 +15,38 @@
         },
         "Swatch 2": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color2":"#f3f3f3",
+            "color3":"#84b97c",
+            "color4":"#575757",
+            "color5":"#aaaaaa",
+            "color6":"#aaaaaa",
             "color7":"#ffffff"
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color2":"#f3f3f3",
+            "color3":"#6299d4",
+            "color4":"#404550",
+            "color5":"#969696",
+            "color6":"#484848",
             "color7":"#ffffff"
         },
         "Swatch 4": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color2":"#f3f3f3",
+            "color3":"#89cdd6",
+            "color4":"#564a58",
+            "color5":"#B8B8B8",
+            "color6":"#484848",
             "color7":"#ffffff"
         },
         "Swatch 5": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color2":"#f3f3f3",
+            "color3":"#ee9848",
+            "color4":"#313941",
+            "color5":"#a2a2a2",
+            "color6":"#a2a2a2",
             "color7":"#ffffff"
         }
     },
@@ -132,7 +132,7 @@
         "font10": {
             "font-family": "Lato",
             "font-size": "21px",
-            "font-weight": "300",
+            "font-weight": "inherit",
             "line-height": "28px",
             "color": "@color-swatch4",
             "letter-spacing": "6px"
