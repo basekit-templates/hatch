@@ -1053,8 +1053,8 @@ hr.line.align-right {
     padding: 6px 0
 }
 
-.widget.tweet a {
-    background-image: image('/images/socialicons-twitter.svg');
+.svg .widget.tweet a {
+    background-image: image('/images/social/socialicons-twitter.svg');
     background-size: 21px;
     background-position: 10px center;
     background-repeat: no-repeat;
@@ -1078,6 +1078,10 @@ hr.line.align-right {
     text-shadow: 0 1px 0px rgba(0,0,0,0.2);
 }
 
+.widget.tweet a {
+  background-image: image('/images/social/socialicons-twitter.png');
+}
+
 .widget.tweet a:hover {
     background-color: @font-swatch7-background-color-hover;
     cursor: pointer;
@@ -1099,89 +1103,101 @@ hr.line.align-right {
     font-family: @font-swatch7-font-family;
 }
 
-.widget.socialicons a,
-.widget.profile .bk-profile-socialicons a {
-    text-decoration: none;
-    text-indent: -9999px;
-}
-
 .widget.profile .bk-profile-socialicons span {
-    display: inline-block
+    display: inline-block;
 }
 
 .widget.socialicons span a,
 .widget.profile .bk-profile-socialicons span a {
-    display: inline-block;
-    margin-right: 6px;
-    margin-bottom: 8px;
-    background-size: 18px;
-    width: 32px;
-    height: 32px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
     background-color: @font-swatch7-background-color;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 18px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 8px;
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 0 0 3px rgba(110,110,110,0.1);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-indent: -9999px;
 }
 
 .widget.profile .bk-profile-socialicons span a {
-    background-color: @font-swatch7-background-color;
-    box-shadow: 0 0 0 3px rgba(110,110,110,0.3);
+    box-shadow: 0 0 0 3px rgba(110,110,110,0.4);
     margin-right: 10px;
 }
 
-/* FOOTER 2 */
-
-footer .footer2 .widget.profile .bk-profile-socialicons span a {
-    width: 26px;
-    height: 26px;
-    background-size: 15px;
-    margin-right: 7px;
-}
-
-footer .footer2 .columns-two-right .widget.profile .bk-profile-socialicons span a {
-    text-align: left;
-}
-
-footer .footer2 .widget.profile .bk-profile-socialicons {
-    padding: 2px 0;
-}
-
 .widget.socialicons span a:hover,
-.widget.profile 
-.bk-profile-socialicons span a:hover {
+.widget.profile .bk-profile-socialicons span a:hover {
     background-color: @font-swatch7-background-color-hover
 }
 
+/* SVG ICONS */
+
+.svg .widget.socialicons span.bk-socialicons-twitter a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.svg');
+}
+
+.svg .widget.socialicons span.bk-socialicons-linkedin a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-facebook a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-rss a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-googleplus a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-youtube a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.svg')
+}
+
+/* PNG ICONS */
+
 .widget.socialicons span.bk-socialicons-twitter a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/socialicons-twitter.svg')
+    background-image: image('/images/social/socialicons-twitter.png');
 }
 
 .widget.socialicons span.bk-socialicons-linkedin a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/socialicons-linkedin.svg')
+    background-image: image('/images/social/socialicons-linkedin.png')
 }
 
 .widget.socialicons span.bk-socialicons-facebook a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/socialicons-facebook.svg')
+    background-image: image('/images/social/socialicons-facebook.png')
 }
 
 .widget.socialicons span.bk-socialicons-rss a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/socialicons-rss.svg')
+    background-image: image('/images/social/socialicons-rss.png')
 }
 
 .widget.socialicons span.bk-socialicons-googleplus a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/socialicons-googleplus.svg')
+    background-image: image('/images/social/socialicons-googleplus.png')
 }
 
 .widget.socialicons span.bk-socialicons-youtube a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/socialicons-youtube.svg')
+    background-image: image('/images/social/socialicons-youtube.png')
 }
 
 /* ===============================
@@ -1440,12 +1456,12 @@ footer .footer2 .widget.profile form {
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev {
   left: 10px;
-  background: image('/images/slideshow-arrow-left.png') no-repeat center left;
+  background: image('/images/slideshow/slideshow-arrow-left.png') no-repeat center left;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
   right: 10px;
-  background: image('/images/slideshow-arrow-right.png') no-repeat center right;   
+  background: image('/images/slideshow/slideshow-arrow-right.png') no-repeat center right;   
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls {
@@ -1454,7 +1470,7 @@ footer .footer2 .widget.profile form {
 
 .widget.responsiveslideshow .slideshow-widget .btn-play
 {
-    background: image('/images/slideshow-play.png') center no-repeat;
+    background: image('/images/slideshow/slideshow-play.png') center no-repeat;
     background-size: 100%;
     border-radius:10px;
     font-size:0;
@@ -1463,19 +1479,19 @@ footer .footer2 .widget.profile form {
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
-    background: image('/images/slideshow-pause.png') center no-repeat;
+    background: image('/images/slideshow/slideshow-pause.png') center no-repeat;
     background-size: 100%;  
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
 {
     border:none;
-    background:transparent image('/images/slideshow-dot-not-selected.png') center no-repeat;
+    background:transparent image('/images/slideshow/slideshow-dot-not-selected.png') center no-repeat;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot.selected
 {
-    background:transparent image('/images/slideshow-dot-selected.png') center no-repeat;
+    background:transparent image('/images/slideshow/slideshow-dot-selected.png') center no-repeat;
 }
 
 
