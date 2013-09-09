@@ -2,10 +2,10 @@
 	"name":"Hatch",
 	"thumbnail":"hatch.png",
 	"screenshot":"hatch.png",
-    "tags": {
-    "en": ["minimal", "clean", "business", "professional"],
-    "es": ["minimalista", "limpio", "corporativo", "profesional"],
-    "br": ["minimalista", "limpo", "corporativo", "profissional"]
+	"tags": {
+    	"en": ["minimal", "clean", "business", "professional"],
+        "es": ["minimalista", "limpio", "corporativo", "profesional"],
+        "br": ["minimalista", "limpo", "corporativo", "profissional"]
     },
 	"colorSwatches":
     {
