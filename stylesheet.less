@@ -1,4 +1,14 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
 @import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
+
+/* ===============================
+   TEMPLATE STYLES
+   =============================== */
 
 body {
   background-color: @color-swatch1;
@@ -571,6 +581,27 @@ footer p {
   text-transform: uppercase;
   text-shadow: 0 1px 0px rgba(0,0,0,0.3);
 }
+
+
+/* ===============================
+   DROPBOX WIDGRT
+   =============================== */
+
+
+.widget.dropbox .b-wrap .btn {
+   border: 2px solid darken(@color-swatch3,5%);
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  font-size: .75em;
+  padding: 11px 12px 11px 38px;
+  background-position: 12px center;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+}
+
 
 /* ===============================
    BUTTON CSS
