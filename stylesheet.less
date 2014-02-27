@@ -199,7 +199,8 @@ footer p {
 }
 
 .widget.extendednavigation a.pull {
-  display: none;
+  top:-53px;
+  right:10px;
 }
 
 .widget.extendednavigation ul {
@@ -1609,29 +1610,6 @@ footer .footer2 .widget.profile form {
     *float: left;
     width: 100%;
   }
-
-   /* NAV ICON */
-
-  .widget .extendednavigation a.pull {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 2px;
-  }
-
-    .widget .extendednavigation a.pull:after {
-    content:"";
-    background: image('/images/nav-icon.png') no-repeat;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: -50px;
-  }
-
-  /* NAV */
-
   
  .widget .extendednavigation ul {
     width: 100%;
@@ -1858,6 +1836,12 @@ footer .footer2 .widget.profile form {
   .wrapper {
     width: 960px; /* 1140px - 10% for margins */
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    margin: 10px 10px 0 10px;
   }
 }
 
