@@ -2,6 +2,7 @@
 	"name":"Hatch",
 	"thumbnail":"hatch.png",
 	"screenshot":"hatch.png",
+	"templateType":"standard",
     "tags": {
     "en": ["minimal", "clean", "business", "professional", "multipurpose", "corporate", "simple", "contemporary", "flexible", "sans-serif"],
     "es": ["minimalista", "limpio", "corporativo", "profesional", "multiuso", "corporativo", "simple", "contemporaneo", "flexible", "sans-serif"],

@@ -9,97 +9,10 @@
    TEMPLATE STYLES
    =============================== */
 
-body {
-  background-color: @color-swatch1;
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-a {
-  font-family:@font-swatch2-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  color:@color-swatch3;
-  text-decoration: none;
-}
-
-a:hover {   
-  text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, p {
-  margin: 0;
-  padding: 0 0 10px;
-}
-
-h1 {
-  font-family:@font-swatch1-font-family;
-  font-weight: @font-swatch1-font-weight;
-  color:@font-swatch1-color;
-  line-height:@font-swatch1-line-height;
-  letter-spacing: @font-swatch1-letter-spacing;
-  font-size: @font-swatch1-font-size;
-}
-
-h2
-{
-  font-family:@font-swatch2-font-family;
-  font-size: @font-swatch2-font-size;
-  font-weight: @font-swatch2-font-weight;
-  line-height:@font-swatch2-line-height;
-  color: @font-swatch2-color;
-  letter-spacing: @font-swatch2-letter-spacing;
-}
-
-h3
-{
-  font-family:@font-swatch3-font-family;
-  font-size:@font-swatch3-font-size;
-  font-weight: @font-swatch3-font-weight;
-  color: @font-swatch3-color;
-  line-height:@font-swatch3-line-height;
-  letter-spacing: @font-swatch3-letter-spacing;
-}
-
-h4
-{
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch4-font-size;
-  font-weight:@font-swatch4-font-weight;
-  line-height:@font-swatch4-line-height;
-  color:@font-swatch4-color;
-  letter-spacing: @font-swatch4-letter-spacing;
-}
-
-p
-{
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-}
-
-ul,
-ol,
-li {
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
 
 blockquote {
     margin: 7px 0;
-    padding: 0;
+    padding: 0 30px;
     quotes: "\201C""\201D""\2018""\2019";
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
@@ -112,6 +25,7 @@ blockquote:before {
     font-family: georgia;
     color: @font-swatch5-color;
     content: open-quote;
+    left: 0;
     font-size: 4em;
     line-height: .1em;
     margin-right: 10px;
@@ -141,8 +55,10 @@ section.main {
    CUSTOM CSS
    =============================== */
 
-.main {
-    padding: 2em 0
+.wrapper {
+    max-width:960px;
+    margin:0 auto;
+    padding: 15px;
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
@@ -285,31 +201,28 @@ footer p {
 .widget.extendednavigation {
   float: right;
   position: relative;
-  max-width: 680px;
+  width: 70%;
 }
 
 .widget.extendednavigation a.pull {
-  display: none;
+  top:-53px;
+  right:10px;
 }
 
 .widget.extendednavigation ul {
-  float: left;
   padding: 0;
   margin: 0;
 }
 
-.widget.extendednavigation ul.align-center li
-{
+.widget.extendednavigation ul.align-center li {
   text-align: center;
 }
 
-.widget.extendednavigation ul.align-left li
-{
+.widget.extendednavigation ul.align-left li {
   text-align: left;
 }
 
-.widget.extendednavigation ul.align-right li
-{
+.widget.extendednavigation ul.align-right li {
   text-align: right;
 }
 
@@ -340,9 +253,6 @@ footer p {
 }
 
 .widget.extendednavigation ul li.folder {
-  padding-right: 15px;
-  background-image: image('/images/arrow-down.png');
-  background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
   cursor: pointer;
@@ -436,14 +346,14 @@ footer p {
   padding-bottom: 0;
 }
 
-.widget.feature button
+.widget.feature .feature-bgimg .content button
 {
   margin: 2em 0;
   padding: 14px 24px;
   border: 0;
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
   box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
   
 
@@ -536,6 +446,71 @@ footer p {
 
 .widget.feature.btn-bottom-right button {
   vertical-align: middle;
+}
+
+
+/* ===============================
+  BLOG
+   =============================== */
+
+.widget {
+    &.blogpostlist {
+        .blog-post-item {
+            border-bottom: 1px dotted @color-swatch5;
+        }
+
+    }
+}
+
+.blog-post-item {
+    margin: 1.5em 0;
+    padding-bottom: 1em;
+    h2 {
+        a {
+            font-family: @font-swatch2-font-family;
+            font-size: @font-swatch2-font-size;
+            font-weight: @font-swatch2-font-weight;
+            line-height: @font-swatch2-line-height;
+            color: @font-swatch2-color;
+            letter-spacing: @font-swatch2-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.blog-post-metadata {
+    background-color: transparent;
+    background-image: none;
+    margin-top: 0;
+    text-align: left;
+}
+
+.blog-list-footer {
+    background-color: transparent;
+    background-image: none;
+}
+
+.blog-post-more-link {
+    float: left;
+    width: 100%;
+}
+
+/* BLOG SEARCH */
+.blogsearch {
+    form {
+        button {
+            padding: 10px;
+            color: @font-swatch7-color;
+            font-size: @font-swatch6-font-size;
+            font-weight: @font-swatch6-font-weight;
+            line-height: @font-swatch6-line-height;
+            background-color: @font-swatch7-background-color;
+            border: none;
+        }
+    }
 }
 
 /* =======================================
@@ -1497,105 +1472,232 @@ footer .footer2 .widget.profile form {
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
-.widget.responsiveslideshow .slideshow-image-list {
-    height: 300px;
+.widget.signupform fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
-.widget.responsiveslideshow .slideshow-widget {
-    background-color: lighten(@color-swatch5,17%);
-}
-.widget.responsiveslideshow span.inner img {
-    width:auto;
-}
-
-.widget.responsiveslideshow .image-wrapper {
-    padding:15px;
-}
-
-.widget.responsiveslideshow .crop .image-wrapper {
-    padding:0;
+.widget.signupform fieldset label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:@font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
 }
 
-.widget.responsiveslideshow .content-wrapper {
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    top:auto;
-    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1); 
+.widget.signupform fieldset input {
+    height: 40px;
+    width: 73%;
+    border: 1px solid lighten(@color-swatch5,30%);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 8px;
+    margin-top: 6px;
+    margin-bottom: 30px;
+    padding: 0;
+    float:left;
+    background-color: @color-swatch1;
 }
 
-.widget.responsiveslideshow .slideshow-image-list {
-    height:450px;
-  }
+.widget.signupform fieldset button.btn {
+    width: 24%;
+    height: 40px;
+    float:right;
+    padding: 1px;
+    margin-top: 6px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+    -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+    box-shadow:         0px 3px 0px darken(@color-swatch3,15%); 
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: none;
 
-.widget.responsiveslideshow .title {
-    display: inline-block;
-    padding:5px 20px 0 20px;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:bkscale(@font-swatch5-line-height, 0.55);
-    color: @color-swatch1;
-    letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.responsiveslideshow .description {
-    display: block;
-    padding: 6px 20px;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:bkscale(@font-swatch5-line-height, 0.55);
-    color: @color-swatch1;
-    letter-spacing: @font-swatch5-letter-spacing;
+.widget.signupform fieldset button.btn:hover {
+    background-color: @font-swatch7-background-color-hover;
+    cursor: pointer;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev, 
-.widget.responsiveslideshow .slideshow-widget .btn-next {
+
+/* ===============================
+   TWEET THIS WIDGET
+   =============================== */
+
+.widget.tweet {
+   padding: 14px 0; 
+}
+
+.widget.tweet a {
+  padding: 8px 13px 8px 38px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: 13px 7px;
+  margin: 2.2em auto;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+    -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+    box-shadow:         0px 3px 0px darken(@color-swatch3,15%); 
+  font-family: @font-swatch7-font-family;
+  font-size:1em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+}
+
+.widget.tweet a:hover, .tweet a:active {
+  padding: 8px 13px 8px 38px;
+  cursor: pointer;
+  background-color: @font-swatch7-background-color-hover;
+  cursor: pointer;
+}
+
+
+/* ===============================
+   SLIDESHOW WIDGET
+   =============================== */
+.widget.responsiveslideshow {
+    .slideshow-image-list,
+    .slideshow-widget {
+        min-height: 450px;
+        @media @tablet {
+            min-height: 350px;
+        }
+        @media @mobile {
+            min-height: 280px;
+            height: 280px;
+        }
+    }
+    .title,
+    .description {
+        display: block;
+        font-size: 15px;
+        padding: 5px 0 5px 10px;
+    }
+    .description {
+      padding-top: 0;
+    }
+    .content-wrapper {
+        background: rgba(0,0,0,0.5);
+    }
+    .slideshow-widget {
+        /* Arrows */
+        .btn-prev,
+        .btn-next {
+            font-size: 0;
+            z-index: 11;
+            text-indent: -99999px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            @media @mobile {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .btn-prev {
+            &:after {
+                content: "\2190";
+                color: #fff;
+                top: 4px;
+                @media @mobile {
+                    top: 1px;
+                }
+            }
+        }
+        .btn-next {
+            &:after {
+                content: "\2192";
+                color: #fff;
+                top: 4px;
+                @media @mobile {
+                    top: 1px;
+                }
+            }
+        }
+        /* Play Button */
+        .btn-play {
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            &:after {
+                color: #fff;
+                letter-spacing: -4px;
+                top: 0;
+            }
+        }
+    }
+    /* Slideshow Controls */
+    .slideshow-widget-controls {
+        .dot {
+            width: 11px;
+            height: 11px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            &.selected {
+                background-color: @color-swatch5;
+            }
+        }
+    }
+}
+
+.widget.responsiveslideshow .btn-play:after {
+    font-size:20px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+    background: rgba(0,0,0,0.5);
     font-size: 0;
-    z-index: 11;
     text-indent: -99999px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 12;
+    width: 42px;
+    height: 42px;
+    top: -5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    @media @mobile {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev {
-  left: 10px;
-  background: image('/images/slideshow/slideshow-arrow-left.png') no-repeat center left;
-}
-
-.widget.responsiveslideshow .slideshow-widget .btn-next {
-  right: 10px;
-  background: image('/images/slideshow/slideshow-arrow-right.png') no-repeat center right;   
-}
-
-.widget.responsiveslideshow .slideshow-widget-controls {
-  margin-top: 10px;
-}
-
-.widget.responsiveslideshow .slideshow-widget .btn-play
-{
-    background: image('/images/slideshow/slideshow-play.png') center no-repeat;
-    background-size: 100%;
-    border-radius:10px;
-    font-size:0;
-    text-indent: -99999px;
-}
-
-.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
-{
-    background: image('/images/slideshow/slideshow-pause.png') center no-repeat;
-    background-size: 100%;  
-}
-
-.widget.responsiveslideshow .slideshow-widget-controls .dot
-{
-    border:none;
-    background:transparent image('/images/slideshow/slideshow-dot-not-selected.png') center no-repeat;
-}
-
-.widget.responsiveslideshow .slideshow-widget-controls .dot.selected
-{
-    background:transparent image('/images/slideshow/slideshow-dot-selected.png') center no-repeat;
+.widget.responsiveslideshow .slideshow-widget .btn-play:after {
+    top:-7px;
+    @media @mobile {
+        top: -15px;
+    }
 }
 
 
@@ -1637,29 +1739,6 @@ footer .footer2 .widget.profile form {
     *float: left;
     width: 100%;
   }
-
-   /* NAV ICON */
-
-  .widget .extendednavigation a.pull {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 2px;
-  }
-
-    .widget .extendednavigation a.pull:after {
-    content:"";
-    background: image('/images/nav-icon.png') no-repeat;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: -50px;
-  }
-
-  /* NAV */
-
   
  .widget .extendednavigation ul {
     width: 100%;
@@ -1735,6 +1814,11 @@ footer .footer2 .widget.profile form {
     padding-left: 10px;
   }
 
+  .widget.feature .feature-bgimg .content button {
+      font-size: .8em;
+      padding: 10px 14px;
+
+  }
 
   /* OTHER */
 
@@ -1766,7 +1850,7 @@ footer .footer2 .widget.profile form {
     line-height:(@font-swatch9-line-height * 0.8); /* 40px */
   }
 
-    .widget.feature button {
+  .widget.feature .feature-bgimg .content button {
       font-size: .8em;
       padding: 10px 14px;
   }
@@ -1819,7 +1903,7 @@ footer .footer2 .widget.profile form {
         line-height: bkscale(@font-swatch9-line-height,0.7);
     }
 
-    .widget.feature .feature-btn button {
+    .widget.feature .feature-bgimg .content button {
         padding: 4px 10px;
         font-size: .7em;
     }
@@ -1860,13 +1944,6 @@ footer .footer2 .widget.profile form {
         box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
     }
 
-     /* SLIDESHOW */
-
-    .widget.responsiveslideshow .slideshow-image-list, 
-    .widget.responsiveslideshow .slideshow-widget {
-        height:280px;
-    }
-
      /* GALLERY */
     .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
       max-height: 150px;
@@ -1882,10 +1959,9 @@ footer .footer2 .widget.profile form {
 
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (max-width: 480px) {
   .wrapper {
-    width: 960px; /* 1140px - 10% for margins */
-    margin: 0 auto;
+    padding:10px;
   }
 }
 
