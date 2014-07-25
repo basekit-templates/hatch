@@ -10,7 +10,7 @@
           {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
           {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
       </div>
-      {{widget('extendednavigation', 'navigationheader', {})|raw}}
+      {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
     </div>
 </header>
 
@@ -18,7 +18,7 @@
     {{zone('main')|raw}}
 </div>  
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-two-50-50">
             <div class="column columns-two-left">
@@ -29,7 +29,6 @@
                 {{widget('content', 'footercolumn2content1', {"content":"<h3>Aliquam Sodales</h3>"})|raw}}
                 {{widget('profile', 'footercolumn2profiletwitter', { 'profileType':'twitter', 'twitter':'profile'})|raw}}
                 {{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
-                
             </div>
         </div>
     </div>
