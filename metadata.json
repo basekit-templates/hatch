@@ -142,7 +142,7 @@
             "font-weight": "inherit",
             "line-height": "28px",
             "color": "@color-swatch4",
-            "letter-spacing": "6px"
+            "letter-spacing": "3px"
         }
     }
 }

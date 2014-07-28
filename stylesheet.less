@@ -106,9 +106,6 @@ header {
 /* COMPANY NAME */
 
 .widget.companyname {
-    @media @tablet {
-        vertical-align: top;
-    }
     a {
         font-family: @font-swatch10-font-family;
         font-weight: @font-swatch10-font-weight;
@@ -168,11 +165,15 @@ footer.bk-footer p {
     width: 70%;
     @media @tablet {
         width: 100%;
+        float: none;
     }
 }
 
 .widget.extendednavigation a.pull {
   top: -26px;
+  @media @tablet {
+    top: 10px;
+  }
 }
 
 .widget.extendednavigation ul.open {
