@@ -9,6 +9,9 @@
    TEMPLATE STYLES
    =============================== */
 
+.main-zone .widget {
+    clear: both;
+}
 
 blockquote {
     margin: 7px 0;
@@ -55,10 +58,14 @@ section.main {
    CUSTOM CSS
    =============================== */
 
+// Wrapper 
 .wrapper {
-    max-width:960px;
-    margin:0 auto;
-    padding: 15px;
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+        width: 960px;
+        margin: 0 auto;
+    }
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
@@ -76,33 +83,37 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    HEADER
    =============================== */
 
-header {
-    padding: 30px 0;
+header.bk-header {
+    padding: 20px 0;
     background-color: @color-swatch7;
 }
 
 .companyheader {
     display: block;
     float: left;
-    padding: 0;
-    margin: 6px 0 0;
+    width: 30%;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+// Logo & Company Name
+.widget.logo, .widget.companyname {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* COMPANY NAME */
 
 .widget.companyname {
-    display: block;
-    float: left;
-}
-
-.widget.companyname a {
-    font-family: @font-swatch10-font-family;
-    font-weight: @font-swatch10-font-weight;
-    color: @font-swatch10-color;
-    line-height: @font-swatch10-line-height;
-    letter-spacing: @font-swatch10-letter-spacing;
-    font-size: @font-swatch10-font-size;
-    
+    a {
+        font-family: @font-swatch10-font-family;
+        font-weight: @font-swatch10-font-weight;
+        color: @font-swatch10-color;
+        line-height: @font-swatch10-line-height;
+        letter-spacing: @font-swatch10-letter-spacing;
+        font-size: @font-swatch10-font-size;
+    }
 }
 
 .widget.companyname a:hover {
@@ -117,8 +128,6 @@ header {
 /* LOGO */
 
 .widget.logo {
-    display: block;
-    float: left;
     margin-right: 10px;
 }
 
@@ -126,19 +135,19 @@ header {
    FOOTER
    =============================== */
 
-footer {
+footer.bk-footer {
   padding: 4em 0;
   background-color: lighten(@color-swatch4,5%);
   min-height: 150px;
   color: @color-swatch1;
 }
 
-footer h1, footer h2, footer h3, footer h4 {
+footer.bk-footer h1, footer.bk-footer h2, footer.bk-footer h3, footer.bk-footer h4 {
   color: @color-swatch1;
   padding-bottom: 20px;
 }
 
-footer p {
+footer.bk-footer p {
   font-family: @font-swatch5-font-family;
   font-size: @font-swatch5-font-size;
   color: lighten(@color-swatch5,10%);
@@ -147,92 +156,36 @@ footer p {
 }
 
 /* ===============================
-   STANDARD NAVIGATION
-   =============================== */
-
-.widget.navigation {
-}
-
-.widget.navigation ul {
-  padding: 0;
-  margin: 20px 0 0;
-}
-
-.widget.navigation ul.align-center li
-{
-  text-align: center;
-}
-
-.widget.navigation ul.align-left li
-{
-  text-align: left;
-}
-
-.widget.navigation ul.align-right li
-{
-  text-align: right;
-}
-
-.widget.navigation ul li {
-  float: left;
-  display: block;
-  padding-right: 40px;
-}
-
-.widget.navigation ul li a {
-  display: block;
-  font-family:@font-swatch6-font-family;
-  font-size:@font-swatch6-font-size;
-  font-weight: @font-swatch6-font-weight;
-  color: @font-swatch6-color;
-  line-height:@font-swatch6-line-height;
-  letter-spacing: @font-swatch6-letter-spacing;
-}
-
-.widget.navigation ul li a:hover {
-  text-decoration: none;
-  color: @color-swatch3;
-}
-
-/* ===============================
    EXTENDED NAVIGATION
    =============================== */
 
 .widget.extendednavigation {
-  float: right;
-  position: relative;
-  width: 70%;
+    float: right;
+    position: relative;
+    width: 70%;
+    @media @tablet {
+        width: 100%;
+        float: none;
+    }
 }
 
 .widget.extendednavigation a.pull {
-  top:-53px;
-  right:10px;
+  top: -26px;
+  @media @tablet {
+    top: 10px;
+  }
 }
 
-.widget.extendednavigation ul {
-  padding: 0;
-  margin: 0;
+.widget.extendednavigation ul.open {
+    @media @tablet {
+        margin-top: 20px;
+    }
 }
 
-.widget.extendednavigation ul.align-center li {
-  text-align: center;
-}
-
-.widget.extendednavigation ul.align-left li {
-  text-align: left;
-}
-
-.widget.extendednavigation ul.align-right li {
-  text-align: right;
-}
-
-.widget.extendednavigation ul li {
-  float: left;
-  display: block;
-}
-
-.widget.extendednavigation ul li:hover {
-  color: @color-swatch3;
+.extendednavigation li.selected {
+    a, .text {
+        color: @color-swatch3;
+    }
 }
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
@@ -308,10 +261,19 @@ footer p {
  color: @color-swatch3;
 }
 
+.widget .extendednavigation ul li.folder:after {
+    top: 45%;
+    right: 1px;
+}
+
 
 /* ===============================
    FEATURE
    =============================== */
+
+.widget.feature {
+    margin-bottom: 30px;
+}
 
 .widget.feature .feature-bgimg {
   height: 500px; /* should be in media query*/
@@ -320,6 +282,7 @@ footer p {
 .widget.feature .content {
   text-align: center;
   height: 500px;
+  padding: 4em 0;
 }
 
 /* FEATURE TITLE */
@@ -371,83 +334,6 @@ footer p {
   cursor: pointer;
 }
 
-.widget.feature button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.feature button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.feature button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.feature button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.feature button.btn.italic {
-    font-style: italic;
-}
-
-.widget.feature button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.feature button span {
-    vertical-align: center;
-}
-
-.widget.feature button i {
-    margin-right: 5px;
-}
-
-/* ===============================
-   FEATURE LAYOUTS
-   =============================== */
-
-/* LEFT ALIGN */
-
-.widget.feature.align-left .content {
-  width: 100%;
-  text-align: left;
-}
-
-/* CENTER ALIGN */
-
-.widget.feature.align-center .content {
-  width: 100%;
-  text-align: center;
-}
-
-/* RIGHT ALIGN */
-
-.widget.feature.align-right .content {
-  width: 100%;
-  text-align: right;
-}
-
-/* BUTTON BOTTOM RIGHT */
-
-.widget.feature.btn-bottom-right .content{
-  width: 100%;
-  text-align: left;
-}
-
-.widget.feature.btn-bottom-right h3 {
-  vertical-align: middle;
-}
-
-.widget.feature.btn-bottom-right button {
-  vertical-align: middle;
-}
-
-
 /* ===============================
   BLOG
    =============================== */
@@ -474,7 +360,7 @@ footer p {
             letter-spacing: @font-swatch2-letter-spacing;
             text-decoration: none;
             &:hover {
-                text-decoration: underline;
+                color: @color-swatch3;
             }
         }
     }
@@ -487,7 +373,7 @@ footer p {
     text-align: left;
 }
 
-.blog-list-footer {
+.blog-list-footer.bk-footer {
     background-color: transparent;
     background-image: none;
 }
@@ -543,115 +429,89 @@ footer p {
     box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
 }
 
-/* ===============================
-   PAYPAL BUTTON
-   =============================== */
+// -----------------------------
+// Buttons
+// -----------------------------
 
-
-.widget.paypalbuynow .widget.button.paypal {
-   border: 2px solid darken(@color-swatch3,5%);
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
-  letter-spacing: 1px;
-  
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
-  padding: 11px 12px 11px 45px;
+// Overrides
+.widget.button button {
+    margin: 10px 0;
 }
 
-
-/* ===============================
-   DROPBOX WIDGRT
-   =============================== */
-
-
-.widget.dropbox .b-wrap .btn {
-   border: 2px solid darken(@color-swatch3,5%);
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
-  font-size: .75em;
-  padding: 11px 12px 11px 38px;
-  background-position: 12px center;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
-  letter-spacing: 1px;
-  
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+// General
+.widget.button button,
+button.btn, 
+.widget.profile form button, 
+.contactform button.btn, 
+.btn,
+.widget.dropbox button, 
+.checkout-order-button, 
+.checkout-empty-link,
+.widget.tweet a,
+.widget.paypalbuynow .widget.button.paypal,
+.blog-post-more-link a,
+.widget.ecombasket .ecombasket-pull,
+.ecombasket-checkout-link,
+.widget.ecomcheckout .checkout-order-button,
+.blog-list-footer.bk-footer a,
+.blogsearch form button,
+.productlist-search button,
+.widget.signupform fieldset button.btn {
+    padding: 4px 12px;
+    margin: 0 0 5px;
+    background-position: 12px center;
+    border: 2px solid darken(@color-swatch3,5%);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @color-swatch3;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    &:hover {
+        background-color: darken(@color-swatch3,5%);
+        cursor: pointer;
+    }
 }
 
-
-/* ===============================
-   BUTTON CSS
-   =============================== */
-
-.widget.button {
-    padding: 4px 0;
+// PayPal, Dropbox, Tweet
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button {
+    padding: 4px 8px 4px 40px;
+}
+.widget.tweet {
+    padding: 0;
+    a {
+        padding: 7px 8px 10px 40px;
+    }
 }
 
-.widget.button button
-{
-  padding: 4px 8px;
-  margin: 1em auto;
-  border: 2px solid darken(@color-swatch3,5%);
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch3;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  letter-spacing: 1px;
-  
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+// Non-radius Buttons
+.widget.signupform fieldset button,
+.blogsearch form button,
+.widget.signupform fieldset button.btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
 
-.widget.button button:hover 
-{
-  background-color: darken(@color-swatch3,5%);
-  cursor: pointer;
-}
-
-
-/* JUSTIFY */
-
-.widget.button button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.button button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.button button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.button button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.button button.btn.italic {
-    font-style: italic;
-}
-
-.widget.button button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.button span {
-    vertical-align: center;
-}
-
-.widget.button i {
-    margin-right: 5px;
+// Signup Button
+.widget.signupform {
+    margin-bottom: 20px;
+    fieldset {
+        button.btn {
+            position: relative;
+            top: 2px;
+            margin-left: 4px;
+        }
+        input {
+            height: 41px;
+        }
+    }
 }
 
 /* ===============================
@@ -722,117 +582,54 @@ footer p {
     line-height: @font-swatch5-line-height;
 }
 
-/* ===============================
-   GALLERY WIDGET
-   =============================== */
+// -----------------------------
+// Gallery
+// -----------------------------
 
 .widget.gallery {
-    width: 101.2%;
-    margin-left: -0.5%;
-}
-
-.widget.gallery ul {
-    display: block;
-    margin: 0;
-    padding: 0px;
-    list-style: none;
-}
-
-.widget.gallery li {
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-}
-
-.widget.gallery li  span.inner {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.widget.gallery ul li.one-to-one span.inner {
-    background-size: 100% 100%
-}
-
-.widget.gallery ul li.portrait span.inner {
-    background-size: 100% auto
-}
-
-.widget.gallery ul li.landscape span.inner {
-    background-size: auto 100%
-}
-
-.widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
-}
-
-.widget.gallery li span.inner img {
-    display: none
-}
-
-.widget.gallery ul:before,
-.widget.gallery ul:after {
-    content: " ";
-    display: table;
-}
-
-.widget.gallery ul:after {
-    clear: both
-}
-
-.widget.gallery ul {
-    *zoom: 1
-}
-
-.widget.gallery li span.inner .title,
-.widget.gallery li span.inner .description {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: -310px;
-    max-height: 284px;
-    background: @color-swatch1;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @color-swatch1;
-    letter-spacing: @font-swatch5-letter-spacing;
-    
-}
-
-.widget.gallery li span.inner:hover .title {
-    margin-bottom: 0
-}
-
-.widget.gallery li span.inner .description {
-    display: none
-}
-
-.widget.gallery li span.inner a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    margin: 20px 0 20px -0.5%;
+    ul li {
+        @media @tablet {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        span.inner {
+            .title,
+            .description {
+                // Font
+                color: @color-swatch1;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
+                text-align: left;
+            }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            .description {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    // Image Data
+    .image-data {
+        display: block;
+        opacity: 0;
+        background-color: @color-swatch3;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 /* Lightbox */
@@ -971,10 +768,6 @@ hr.line.align-right {
    TWITTER WIDGET
    =============================== */
 
-
-.widget.twitter {
-}
-
 .widget.twitter a {
    color: @color-swatch4;
    font-size:@font-swatch5-font-size;
@@ -1006,6 +799,13 @@ hr.line.align-right {
 .widget.twitter .twitter-profile-pic {
     float: left;
     margin-right: 20px;
+}
+
+.widget.twitter .twitter-profile-pic,
+.widget.twitter .twitter-content {
+    @media @tablet {
+        float: none;
+    }
 }
 
 .widget.twitter .twitter-content span.bk-full-name {
@@ -1123,52 +923,6 @@ hr.line.align-right {
     font-weight: bold;
 }
 
-/* ===============================
-   TWEET THIS
-   =============================== */
-
-.widget.tweet {
-    padding: 6px 0
-}
-
-.svg .widget.tweet a {
-    background-image: image('/images/social/socialicons-twitter.svg');
-    background-size: 21px;
-    background-position: 10px center;
-    background-repeat: no-repeat;
-    background-color: @font-swatch7-background-color;
-
-    font-family: @font-swatch7-font-family;
-    font-size: .75em;
-    font-weight: @font-swatch7-font-weight;
-    line-height: @font-swatch7-line-height;
-    color: @font-swatch7-color;
-    letter-spacing: @font-swatch7-letter-spacing;
-    background-color: @font-swatch7-background-color;
-    padding: 11px 12px 11px 38px;
-    border: 0;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-    
-    text-decoration: none;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
-}
-
-.widget.tweet a {
-  background-image: image('/images/social/socialicons-twitter.png');
-}
-
-.widget.tweet a:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
-}
-
-.widget.tweet a:active {
-    box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
-}
-
 
 /* ==================================
    SOCIAL BAR WIDGET / SOCIAL PROFILE
@@ -1176,6 +930,7 @@ hr.line.align-right {
 
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons {
+    width: 100%;
     padding: 10px 0;
     font-size: 1em;
     font-family: @font-swatch7-font-family;
@@ -1201,7 +956,8 @@ hr.line.align-right {
     -moz-border-radius: 30px;
     border-radius: 30px;
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
+    overflow: hidden;
     white-space: nowrap;
 }
 
@@ -1321,7 +1077,7 @@ hr.line.align-right {
   padding: 0 0 20px;
 }
 
-footer .footer2 .widget.profile form {
+footer.bk-footer .footer.bk-footer2 .widget.profile form {
   padding: 0 0 8px;
 }
 
@@ -1388,192 +1144,6 @@ footer .footer2 .widget.profile form {
     background-color: @font-swatch7-background-color-hover;
     cursor: pointer;
 }
-
-/* ===============================
-   MAP WIDGET
-   =============================== */
-
-.widget.map {
-
-}
-
-/* ===============================
-   SIGNUP FORM WIDGET
-   =============================== */
-
-.widget.signupform {
-  padding: 0px;
-}
-
-.widget.signupform fieldset {
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
-.widget.signupform label {
-    float: left;
-    width: 100%;
-    margin-bottom: 2px;
-    font-family:@font-swatch5-font-family;
-    font-size:font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-    letter-spacing:@font-swatch5-letter-spacing;
-}
-
-.widget.signupform fieldset input {
-    height: 44px;
-    background-color: @color-swatch2;
-    border: 0;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 12px;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.widget.signupform fieldset input:focus {
-  outline: none;
-}
-
-.widget.signupform button {
-    font-family: @font-swatch7-font-family;
-    font-size: .8em;
-    font-weight: @font-swatch7-font-weight;
-    line-height: @font-swatch7-line-height;
-    color: @font-swatch7-color;
-    letter-spacing: @font-swatch7-letter-spacing;
-    background-color: @font-swatch7-background-color;
-    padding: 8px 16px;
-    border: 1px solid darken(@color-swatch3,5%);
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
-    
-    text-decoration: none;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
-}
-
-.widget.signupform button:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
-}
-
-.widget.signupform button:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
-
-/* ===============================
-   SLIDESHOW WIDGET
-   =============================== */
-.widget.signupform fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.widget.signupform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch4-font-family;
-    font-size:@font-swatch4-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@font-swatch4-color;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-.widget.signupform fieldset input {
-    height: 40px;
-    width: 73%;
-    border: 1px solid lighten(@color-swatch5,30%);
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 30px;
-    padding: 0;
-    float:left;
-    background-color: @color-swatch1;
-}
-
-.widget.signupform fieldset button.btn {
-    width: 24%;
-    height: 40px;
-    float:right;
-    padding: 1px;
-    margin-top: 6px;
-    border: none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
-    -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
-    box-shadow:         0px 3px 0px darken(@color-swatch3,15%); 
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-shadow: none;
-
-}
-
-.widget.signupform fieldset button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
-}
-
-
-/* ===============================
-   TWEET THIS WIDGET
-   =============================== */
-
-.widget.tweet {
-   padding: 14px 0; 
-}
-
-.widget.tweet a {
-  padding: 8px 13px 8px 38px;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-position: 13px 7px;
-  margin: 2.2em auto;
-  border: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
-    -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
-    box-shadow:         0px 3px 0px darken(@color-swatch3,15%); 
-  font-family: @font-swatch7-font-family;
-  font-size:1em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
-}
-
-.widget.tweet a:hover, .tweet a:active {
-  padding: 8px 13px 8px 38px;
-  cursor: pointer;
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-}
-
 
 /* ===============================
    SLIDESHOW WIDGET
@@ -1699,17 +1269,435 @@ footer .footer2 .widget.profile form {
     }
 }
 
+// -----------------------------
+// ECOMMERECE
+// -----------------------------
+
+// Select Boxes
+// -----------------------------
+
+.productlist-filter,
+.delivery {
+    select {
+        height: 35px;
+        padding: 8px 33px 8px 8px;
+        background-position-x: 93%;
+        background-position-y: 55%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: 1px solid darken(@color-swatch1,10%);
+        background-color: darken(@color-swatch1,4%);
+        text-indent: 0.01px;
+        text-overflow: '';
+        color: @color-swatch5;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+        @media @tablet {
+            width: 100%;
+        }
+    }
+}
+
+// Product Filter
+// -----------------------------
+
+// Shame CSS
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+    @media (max-width: 1060px) {
+        margin-bottom: 10px;
+    }
+}
+
+.productlist-filter {
+    .form-group {
+        @media @mobile {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    // Label
+    label {
+        display: block;
+        font-family: @font-swatch2-font-family;
+        font-size: 14px;
+        color: @color-swatch4;
+        line-height: @font-swatch4-line-height;
+        font-weight: normal;
+    }
+    // Product Search
+    .productlist-search {
+        margin-bottom: 20px;
+        input {
+            height: 35px;
+            margin-top: 2px;
+            border: 1px solid darken(@color-swatch1,10%);
+            background-color: darken(@color-swatch1,4%);
+            border-radius: 3px;
+            @media @tablet {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        .btn {
+            position: relative;
+            top: 1px;
+            height: 35px;
+            margin-left: 2px;
+            padding: 0 10px;
+            border-radius: 3px;
+        }
+    }
+}
+
+// Item Count
+.productlist-item-count {
+    font-family: @font-swatch4-font-family;
+    font-size: 14px;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    letter-spacing: @font-swatch4-letter-spacing;
+    color: @color-swatch5;
+    @media @tablet {
+        margin-top: 20px;
+    }
+}
+
+// Item Count
+.productlist-item-count {
+    font-family: @font-swatch4-font-family;
+    font-size: 14px;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    letter-spacing: @font-swatch4-letter-spacing;
+    color: @color-swatch5;
+}
+
+// Single Product
+// -----------------------------
+
+.widget.ecomproduct .ecom-product {
+    margin-bottom: 30px;
+    // Product Info
+    .ecom-product-vartitle,
+    .ecom-product-category,
+    .ecom-product-tag {
+        font-family: @font-swatch4-font-family;
+        font-size: 15px;
+        font-weight: @font-swatch4-font-weight;
+        line-height: @font-swatch4-line-height;
+        letter-spacing: @font-swatch4-letter-spacing;
+        color: @font-swatch4-color;
+    }
+    .ecom-product-preview-image-wrap {
+        text-align: left;
+    }
+    // Price
+    .ecom-product-price {
+        font-size: 20px;
+    }
+    .ecom-product-variation {
+        padding: 4px 0;
+        margin-top: 10px;
+        border-top: 1px solid darken(@color-swatch1,10%);
+        border-bottom: 1px solid darken(@color-swatch1,10%);
+    }
+    // Select
+    .ecom-product-info .ecom-product-variation select {
+        display: block;
+        width: auto;
+        height: 35px;
+        margin-bottom: 12px;
+        padding: 8px 33px 8px 8px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: image('/images/select-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position-x: 93%;
+        background-position-y: 55%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: 1px solid darken(@color-swatch1,10%);
+        background-color: darken(@color-swatch1,4%);
+        text-indent: 0.01px;
+        text-overflow: '';
+        color: @color-swatch5;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+        @media @mobile {
+            width: 100%;
+        }
+        &::-ms-expand {
+            display: none;
+        }
+        &[name="displayCount"] {
+            margin-bottom: 0;
+        }
+    }
+    // Product Category Info
+    .ecom-product-category {
+        position: relative;
+        bottom: -10px;
+        line-height: 22px;
+    }
+    .ecom-product-cattag {
+        margin: 4px 0 0;
+    }
+    // Category Separation
+    .ecom-product-tag-link:after {
+        content: ',';
+    }
+    .ecom-product-tag-link:last-child:after {
+        display: none;
+    }
+    // Product Description
+    .ecom-product-long-description {
+        margin: 20px 0;
+    }
+    // Add to Cart
+    .ecom-product-add-to-cart-btn.added {
+        border: 0;
+    }
+}
+
+// -----------------------------
+// Blog
+// -----------------------------
+
+.blog-post-item {
+    margin: 0 0 2em;
+    padding: 0 0 1.3em;
+    border-bottom: 1px solid darken(@color-swatch1,10%);
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+
+.blog-post-more-link {
+    margin-bottom: 10px;
+    a {
+        padding: 6px 10px;
+    }
+}
+
+.blog-post-feature-image-wrap {
+    margin-bottom: 1.3em;
+    background-image: none!important;
+    @media @mobile {
+        margin-bottom: .5em;
+    }
+}
+
+.blog-post-title a {
+    color: @color-swatch4;
+    &:hover {
+        color: @color-swatch2;
+        text-decoration: none;
+    }
+}
+
+.blog-post-summary {
+    padding-bottom: 1.3em;
+}
+
+.blog-post-metadata {
+    padding: 15px 0 0;
+    margin-top: 20px;
+    border-top: 1px solid darken(@color-swatch1,10%);
+}
+
+// Metadata
+.blog-post-date time,
+.blog-post-publish-date {
+    font-family: @font-swatch4-font-family;
+    font-size: 14px;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    letter-spacing: 1px;
+    color: @font-swatch4-color;
+}
+
+.blog-list-footer {
+    margin: 10px 0 30px;
+    a {
+        padding: 6px 10px;
+        color: @color-swatch1;
+        box-shadow: none;
+        &:hover {
+            background-color: @color-swatch1;
+            border-color: @color-swatch3;
+            color: @color-swatch4;
+        }
+    }
+}
+
+// Blog Post
+.blog-post-category-label,
+.blog-post-tags-label,
+.blog-post-tags,
+.blog-post-category,
+.blog-post-tag a {
+    font-family: @font-swatch4-font-family;
+    font-size: 15px;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    letter-spacing: @font-swatch4-letter-spacing;
+    color: @font-swatch4-color;
+}
+
+// Category Separation
+.blog-post-tags {
+    margin-bottom: 10px;
+}
+
+.blog-post-tag a {
+    color: @color-swatch3;
+}
+
+.blog-post-tag a:after {
+    content: ',';
+}
+
+// Sharing Buttons
+.blog-post-sharing button {
+    padding: 1px 8px;
+    box-shadow: none;
+    font-size: 12px;
+}
+
+// Blog Search
+.blog-search-form {
+    margin-bottom: 30px;
+    label {
+        margin-right: 4px;
+        font-family: @font-swatch4-font-family;
+        font-size: @font-swatch4-font-size;
+        font-weight: @font-swatch4-font-weight;
+        line-height: @font-swatch4-line-height;
+        letter-spacing: @font-swatch4-letter-spacing;
+        color: @font-swatch4-color;
+    }
+    button {
+        position: relative;
+        top: 1px;
+        margin: 0px 0 0 6px;
+        padding: 0px 14px 1px;
+        @media @mobile {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// -----------------------------
+// Menu
+// -----------------------------
+
+// Menu Sections
+.widget.menusections {
+    margin: 0 0 30px;
+    ul {
+        padding: 1em!important;
+        text-align: center;
+        li {
+            @media @mobile {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+    a {
+        color: @color-swatch4;
+        &:hover {
+            color: @color-swatch2;
+            text-decoration: none;
+        }
+    }
+}
+
+// Main Menu
+.widget.menu {
+    .main.wrapper {
+        width: 100%;
+        margin: 0 0 2em;
+        border-bottom: 1px solid darken(@color-swatch1,15%);
+        padding-bottom: 30px;
+    }
+    .menu-name,
+    .menu-description,
+    .menu-note,
+    .menu-subsection-name,
+    .menu-subsection-description {
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .menu-subsection {
+        padding: 0;
+    }
+    .menu-item-image-wrap {
+        background-image: none!important;
+        img {
+            max-height: 180px;
+        }
+    }
+}
+
+// Promoted Item
+.widget.menusections ul,
+.menu .menu-items li.menu-item-promoted,
+.menu-subsection-promoted {
+    padding: 2em;
+    border: 1px dotted darken(@color-swatch1,30%);
+}
+
+// Nutritional Info
+.menu-item-nutritional-title {
+    font-size: bkscale(@font-swatch5-font-size,0.8);
+    letter-spacing: @font-swatch7-letter-spacing;
+    text-transform: uppercase;
+}
+.menu-item-nutritional-prop {
+    font-size: bkscale(@font-swatch5-font-size,0.8);
+    line-height: bkscale(@font-swatch5-line-height,0.8);
+    margin-bottom: 10px;
+}
+
+// Price 
+.standard-price {
+    color: @font-swatch4-color;
+    font-family: @font-swatch4-font-family;
+    font-size: @font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+// Dietary Icons
+.menu .menu-section-item-dietary-props .dietary-icon {
+    padding: 2px 4px;
+    border: 1px dotted darken(@color-swatch1,30%);
+    font-family: @font-swatch7-font-family;
+    font-size: 11px;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    letter-spacing: @font-swatch7-letter-spacing;
+}
+
 
 /* ===============================
    IPAD WIDTH
    =============================== */
 
 @media only screen and (max-width: 768px) {
-
-  header {
-    padding: 22px 0;
-    border-bottom: 0;
-  }
 
   .widget.companyheader {
     width: 100%;
@@ -1726,29 +1714,25 @@ footer .footer2 .widget.profile form {
   }
 
   /* NAV */
-
-  .widget.extendednavigation {
-    width: 100%;
-    padding: 0;
-    margin-top: 26px;
-  }
-  .widget .extendednavigation {
-    display: table;
-    *display: block;
-    *float: left;
-    width: 100%;
-  }
   
- .widget .extendednavigation ul {
-    width: 100%;
-    display: none;
-    margin: 0;
+.widget .extendednavigation ul {
     border-top: 1px solid @color-swatch2;
-  }
+    padding-top: 0;
+}
+
+.widget .extendednavigation ul.align-right li.folder {
+    background-position: left center;
+    &:after {
+        right: inherit;
+    }
+}
 
   .widget.extendednavigation ul li {
-  border-bottom: 1px solid @color-swatch2;
-  padding: 16px 0;
+      border-bottom: 1px solid @color-swatch2;
+      padding: 0;
+      &:last-child {
+        border-bottom: 0;
+      }
   }
 
   .widget.extendednavigation ul li:hover .text {
@@ -1759,17 +1743,8 @@ footer .footer2 .widget.profile form {
     border-bottom: 1px solid @color-swatch2;
   }
 
-  .widget.extendednavigation ul li.folder {
-    padding: 16px 0;
-  }
-
-  .widget .extendednavigation li {
-    width: 100%;
-    padding: 0;
-  }
-
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-      padding: 5px 0;
+      padding: 10px 0;
       margin: 0;
   }
 
@@ -1780,8 +1755,8 @@ footer .footer2 .widget.profile form {
   .widget.extendednavigation ul li:hover > ul {
       display: block!important;
       width: 100%;
-      margin: 16px 0;
-      padding: 0;
+      padding: 0 10px;
+      margin: 0;
   }
 
   .widget.extendednavigation ul li:hover > ul > li {
@@ -1801,10 +1776,10 @@ footer .footer2 .widget.profile form {
   }
 
   .widget.extendednavigation ul li:hover > ul li:first-child {
-    padding-top: 16px;
     border-top: none;
   }
 
+<<<<<<< HEAD
     .widget.extendednavigation ul li:hover > ul li:last-child {
     padding-top: 16px;
   }
@@ -1814,6 +1789,8 @@ footer .footer2 .widget.profile form {
     padding-right: 10px;
   }
 
+=======
+>>>>>>> 6fabc98713a477d34a359edfe3bb4a4445b1a800
   .widget.feature .feature-bgimg .content button {
       font-size: .8em;
       padding: 10px 14px;
@@ -1854,15 +1831,6 @@ footer .footer2 .widget.profile form {
       font-size: .8em;
       padding: 10px 14px;
   }
-
-
-  /* GALLERY */
-    .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-      max-height: 220px;
-      font-size:bkscale(@font-swatch5-font-size,0.9);
-      line-height:bkscale(@font-swatch5-line-height,0.9);
-    }
-
     /* SLIDESHOW */
 
     .widget.responsiveslideshow .slideshow-image-list, 
@@ -1948,25 +1916,6 @@ footer .footer2 .widget.profile form {
         box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
     }
 
-     /* GALLERY */
-    .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-      max-height: 150px;
-      font-size:bkscale(@font-swatch5-font-size,0.8);
-      line-height:bkscale(@font-swatch5-line-height,0.8);
-    }
-
-    .widget.gallery ul.gallery-widget li
-    {
-      width: 50%;
-      padding-bottom: 50%;
-    }
-
-}
-
-@media only screen and (max-width: 480px) {
-  .wrapper {
-    padding:10px;
-  }
 }
 
 .clearfix:before,

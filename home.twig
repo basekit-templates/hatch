@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<header>
+<header class="bk-header">
     <div class="wrapper clearfix">
       <div class="companyheader clearfix">
           {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
           {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
       </div>
-      {{widget('extendednavigation', 'navigationheader', {})|raw}}
+      {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
     </div>
 </header>
 
@@ -16,11 +16,13 @@
     {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"LOREM IPSUM","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
 </section>
 
-<div class="wrapper clearfix">
-    {{zone('main')|raw}}
-</div>  
+<div class="main-zone">
+  <div class="wrapper clearfix">
+      {{zone('main')|raw}}
+  </div>  
+</div>
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-two-50-50">
             <div class="column columns-two-left">

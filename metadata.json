@@ -3,6 +3,7 @@
 	"thumbnail":"hatch.png",
 	"screenshot":"hatch.png",
 	"templateType":"standard",
+    "pageTypes":["home"],
     "tags": {
     "en": ["minimal", "clean", "business", "professional", "multipurpose", "corporate", "simple", "contemporary", "flexible", "sans-serif"],
     "es": ["minimalista", "limpio", "corporativo", "profesional", "multiuso", "corporativo", "simple", "contemporaneo", "flexible", "sans-serif"],
@@ -141,7 +142,7 @@
             "font-weight": "inherit",
             "line-height": "28px",
             "color": "@color-swatch4",
-            "letter-spacing": "6px"
+            "letter-spacing": "3px"
         }
     }
 }
