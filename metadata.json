@@ -1,7 +1,7 @@
 {
 	"name":"Hatch",
 	"thumbnail":"hatch.png",
-	"screenshot":"hatch.png",
+	"screenshot":"hatch-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes":["home"],
     "tags": {
