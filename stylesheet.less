@@ -442,6 +442,7 @@ footer.bk-footer p {
 button.btn,
 .widget.profile form button,
 .contactform button.btn,
+.advancedcontactform button,
 .btn,
 .widget.dropbox button,
 .checkout-order-button,
@@ -820,7 +821,8 @@ hr.line.align-right {
    CONTACT FORM WIDGET
    =============================== */
 
-.widget.contactform form {
+.widget.contactform form,
+.advancedcontactform form {
     display: block;
     padding: 20px;
     margin-bottom: 20px;
@@ -830,14 +832,15 @@ hr.line.align-right {
     border-radius: 3px;
 }
 
-.widget.contactform fieldset {
+.widget.contactform fieldset,
+.advancedcontactform fieldset {
     border: none;
     padding: 0;
 }
 
-.widget.contactform fieldset label {
+.widget.contactform fieldset label,
+.advancedcontactform fieldset label {
     width: 100%;
-    float: left;
     font-family:@font-swatch4-font-family;
     font-size:@font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
@@ -846,7 +849,9 @@ hr.line.align-right {
     letter-spacing: @font-swatch4-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform fieldset input,
+.advancedcontactform fieldset input,
+.advancedcontactform fieldset select {
     height: 40px;
     width: 100%;
     border: 1px solid darken(@color-swatch2,6%);
@@ -858,7 +863,8 @@ hr.line.align-right {
     margin-bottom: 30px;
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform fieldset textarea,
+.advancedcontactform fieldset textarea {
     height: 100px;
     width: 100%;
     border: 1px solid darken(@color-swatch2,6%);
@@ -872,7 +878,8 @@ hr.line.align-right {
     resize: none;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn,
+.advancedcontactform fieldset button {
     padding: 4px 8px;
     margin: 0;
     border: 2px solid darken(@color-swatch3,5%);
@@ -891,7 +898,8 @@ hr.line.align-right {
 
 }
 
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform fieldset button.btn:hover,
+.advancedcontactform fieldset button:hover {
   background-color: darken(@color-swatch3,5%);
   cursor: pointer;
 }
@@ -2102,6 +2110,3 @@ footer.bk-footer .footer.bk-footer2 .widget.profile form {
 .clearfix {
   *zoom: 1;
 }
-
-
-
