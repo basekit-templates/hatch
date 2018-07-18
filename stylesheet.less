@@ -1726,13 +1726,14 @@ footer.bk-footer .footer.bk-footer2 .widget.profile form {
 .blog-list-footer {
     margin: 10px 0 30px;
     a {
-        padding: 6px 10px;
-        color: @color-swatch1;
+        padding: 6px 10px 6px 0;
+        color: @color-swatch3;
         box-shadow: none;
+        text-decoration: none;
+
         &:hover {
-            background-color: @color-swatch1;
-            border-color: @color-swatch3;
-            color: @color-swatch4;
+            color: darken(@color-swatch3, 10%);
+            text-decoration: underline;
         }
     }
 }
