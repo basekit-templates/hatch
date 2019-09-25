@@ -1,5 +1,6 @@
 {
 	"name":"Hatch",
+	"versionTenCompatible": 1,
 	"thumbnail":"hatch.png",
 	"screenshot":"hatch-screenshot.jpg",
 	"templateType":"standard",
